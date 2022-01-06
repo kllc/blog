@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GitHub Pages Markdown Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/vs2015.min.css"
+    />
+    <style>
+      body {
+        font-family: "Noto Sans JP", sans-serif;
+      }
+      a {
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .toc a {
+        /* Table of contents anchor link style */
+        color: #1976d2;
+      }
+      .toc a:hover {
+        color: #d17519;
+      }
+      .toc a.is-active-link {
+        /* The style of the currently active table of contents */
+        color: #d17519;
+      }
+      .content {
+        padding: 10px;
+      }
+      .content h1 {
+        width: 100%;
+        border-bottom: 1px solid #999;
+      }
+      .content p {
+        padding: 0 10px;
+        padding-bottom: 16px;
+        margin: 0 !important;
+      }
+      .content h1,
+      .content h2,
+      .content h3 {
+        /* Fixing anchor link misalignment */
+        margin-bottom: 16px;
+        margin-top: -100px;
+        padding-top: 100px;
+      }
+      .content code {
+        background: #000 !important;
+        color: #fff !important;
+        margin: 0 20px;
+        margin-bottom: 16px;
+      }
+      .content p > code {
+        margin: 0;
+      }
+      .content hr {
+        margin-bottom: 16px !important;
+      }
+      .content table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 0 20px;
+        margin-bottom: 16px;
+      }
+      .content table th {
+        padding: 10px 20px;
+        border-bottom: 1px solid #999;
+        background-color: #eee;
+      }
+      .content table td {
+        padding: 10px 20px;
+        border-top: 1px solid #ccc;
+      }
+      .content blockquote {
+        margin: 0;
+        margin-bottom: 16px;
+        border-left: 0.25em solid #dfe2e5;
+        padding: 0 1em;
+      }
+      .content blockquote > :first-child {
+        margin-top: 0;
+      }
+      .content blockquote > :last-child {
+        margin-bottom: 0;
+      }
+      .content ul,
+      .content ol {
+        margin: 0;
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <v-app v-show="load" style="display: none">
+        <v-app-bar app color="white" Dense elevation="2">
+          <v-toolbar-title>
+            <a href="./">
+              <v-img
+                contain
+                width="40"
+                src="https://twemoji.maxcdn.com/v/13.0.1/72x72/1f4d8.png"
+              />
+            </a>
+          </v-toolbar-title>
+          <v-toolbar-title class="ml-2">
+            <a href="./"> GitHub Pages Markdown Blog </a>
+          </v-toolbar-title>
+        </v-app-bar>
+
+        <v-main class="grey lighten-5">
+          <v-container fluid>
+            <section id="blog" v-show="!bloghtml">
+              <div class="py-4"></div>
+              <h2
+                class="display-2 font-weight-bold mb-2 text-uppercase text-center"
+              >
+                Blog
+              </h2>
+
+              <v-container>
+                <v-row>
+                  <v-col
+                    v-for="({ src, img, title, text}, i) in articles"
+                    :key="i"
+                    cols="12"
+                    xs="12"
+                    sm="6"
+                    md="4"
+                    lg="4"
+                    xl="3"
+                  >
+                    <v-card
+                      elevation="4"
+                      hover
+                      class="ma-0"
+                      :href="'./?src=' + src"
+                    >
+                      <v-img
+                        :src="img?img:image(title||src)"
+                        height="200px"
+                        cover
+                      ></v-img>
+                      <v-card-title> {{title||src}} </v-card-title>
+                      <v-card-text> {{text}} </v-card-text>
+                    </v-card>
+                  </v-col>
+                </v-row>
+              </v-container>
+              <div class="py-12"></div>
+            </section>
+
+            <section v-show="bloghtml">
+              <div class="py-4"></div>
+              <v-container>
+                <div align="center" :style="'margin-left: ' + center_margin">
+                  <v-img
+                    height="120"
+                    contain
+                    :src="blogprop.img?blogprop.img:image(blogprop.title||blogprop.src)"
+                  />
+                </div>
+                <h1 align="center" :style="'margin-left: ' + center_margin">
+                  {{blogprop.title||blogprop.src}}
+                </h1>
+                <p align="center" :style="'margin-left: ' + center_margin">
+                  {{blogprop.date}}
+                </p>
+              </v-container>
+
+              <v-container>
+                <v-row>
+                  <v-col cols="12" xs="12" sm="12" md="12" lg="8" xl="8">
+                    <v-card
+                      elevation="2"
+                      class="pa-4"
+                      :min-height="'calc(50vh - 120px - ' + $vuetify.application.top + 'px )'"
+                    >
+                      <div class="content" v-html="bloghtml"></div>
+                    </v-card>
+                  </v-col>
+                  <v-col cols="12" xs="12" sm="12" md="12" lg="4" xl="4">
+                    <v-card
+                      elevation="2"
+                      class="pa-4 mb-2"
+                      :style="'width:' + side_width + ';'"
+                    >
+                      <span class="title"> topic</span>
+                      <div class="py-1"></div>
+                      <v-chip v-for="(item in blogprop.topics" class="ma-1">
+                        {{item}}
+                      </v-chip>
+                    </v-card>
+                    <v-card
+                      elevation="2"
+                      class="pa-4 mb-2"
+                      :style="'width:' + side_width + ';'"
+                    >
+                      <span class="title"> author</span>
+                      <div class="ma-2">
+                        <v-img
+                          class="pa-2"
+                          contain
+                          width="40"
+                          :src="blogprop.author?blogprop.author.avatar?blogprop.author.avatar:image(blogprop.author.name):image(blogprop.src)"
+                        />
+                      </div>
+                      <div class="pa-1">
+                        {{blogprop.author?blogprop.author.name:""}}
+                      </div>
+                      <div class="pa-1">
+                        {{blogprop.author?blogprop.author.message:""}}
+                      </div>
+                    </v-card>
+                    <v-card
+                      v-show="clientWidth > 1280 - 16"
+                      elevation="2"
+                      class="pa-4"
+                      :style="'width:' + side_width + ';'"
+                    >
+                      <span class="title"> index</span>
+                      <div class="toc"></div>
+                    </v-card>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </section>
+          </v-container>
+        </v-main>
+
+        <v-footer dark>
+          <div class="title font-weight-light grey--text">
+            &copy; {{ (new Date()).getFullYear() }} KLLC ||
+            <a href="https://github.com/kllc/blog">
+              https://github.com/kllc/blog</a
+            >
+            <!-- // If you want to remove the ads, remove this line. -->
+            ||<span v-html="ad"></span>
+          </div>
+        </v-footer>
+      </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/vbnet.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/ir-black.min.css"
+    />
+
+    <script type="module">
+      import index from "./index.js";
+      // If you want to remove the ads, remove this line.
+      import ad from "https://kllc.github.io/repo/script/ad.js";
+      // If you want to speed up, delete this line.
+      import emoji from "https://kllc.github.io/repo/script/emoji.js";
+
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data() {
+          return {
+            load: false,
+            bloghtml: "",
+            blogprop: {
+              id: 0,
+              src: "https://twemoji.maxcdn.com/v/13.0.1/72x72/1f4d8.png",
+              date: "",
+              img: "https://twemoji.maxcdn.com/v/13.0.1/72x72/1f4d8.png",
+              title: "",
+              topics: [],
+              author: { name: "", avatar: "", message: "" },
+              text: "",
+            },
+            articles: index(),
+            // If you want to remove the ads, remove this line.
+            ad: ad(),
+            clientWidth: 0,
+            clientHeight: 0,
+            // If you want to speed up, delete this line.
+            emojis: emoji(),
+          };
+        },
+        computed: {
+          side_width() {
+            if (this.clientWidth > 1280 - 16) {
+              return "310px";
+            } else {
+              return "100%";
+            }
+          },
+          center_margin() {
+            if (this.clientWidth > 1920 - 16) {
+              return (1920 - 16 - this.clientWidth) / 2 + "px";
+            } else if (this.clientWidth > 1280 - 16) {
+              return (1280 - 16 - this.clientWidth) / 2 + "px";
+            } else {
+              return "0px";
+            }
+          },
+        },
+        async mounted() {
+          const url = new URL(window.location.href);
+          const params = url.searchParams;
+
+          if (params.get("src")) {
+            this.blogprop = this.articles.filter((item) => {
+              if (item.src == params.get("src")) return true;
+            })[0];
+            const res = await axios.get(this.blogprop.src);
+            document.title = this.blogprop.title || this.blogprop.src;
+
+            // Setting up marked.js
+            marked.setOptions({
+              breaks: true,
+
+              // Highlighting with highlight.js
+              highlight: function (code, lang) {
+                return hljs.highlightAuto(code, [lang]).value;
+              },
+            });
+
+            // Initial processing of highlight.js
+            hljs.initHighlightingOnLoad();
+
+            this.bloghtml = marked(res.data);
+          }
+
+          this.$nextTick(() => {
+            this._updateDimensions();
+            window.addEventListener("resize", this._updateDimensions, {
+              passive: true,
+            });
+            tocbot.init({
+              tocSelector: ".toc",
+              contentSelector: ".content",
+              headingSelector: "h1, h2, h3",
+              hasInnerContainers: true,
+            });
+          });
+
+          this.load = true;
+        },
+        methods: {
+          _updateDimensions() {
+            this.clientWidth = Math.max(
+              document.documentElement.clientWidth,
+              window.innerWidth || 0
+            );
+            this.clientHeight = Math.max(
+              document.documentElement.clientHeight,
+              window.innerHeight || 0
+            );
+          },
+
+          image(text) {
+            //https://qiita.com/_shimizu/items/eb6834f255d76b1ed8cf
+            return this.emojis[
+              Math.floor(this.decimalHash(text) * this.emojis.length)
+            ];
+            return "https://twemoji.maxcdn.com/v/13.0.1/72x72/1f4d8.png";
+          },
+          decimalHash(string) {
+            // https://stackoverflow.com/questions/61634063/generate-deterministic-hash-number-between-0-and-1-from-string
+            let sum = 0;
+            for (let i = 0; i < string.length; i++)
+              sum += ((i + 1) * string.codePointAt(i)) / (1 << 8);
+            return sum % 1;
+          },
+        },
+        destroyed() {
+          window.removeEventListener("resize", this._updateDimensions);
+        },
+      });
+    </script>
+  </body>
+</html>
+<!--
+xs	Extra small		< 600px
+sm	Small	600px	600px >< 960px
+md	Medium	960px	960px >< 1,264px*
+lg	Large	1,264px	1,264px* >< 1,904px*
+xl	Extra large	1,904px	> 1,904px*
+*Actual display area is -16px (scrollbar width)
+-->
