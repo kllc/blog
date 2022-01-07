@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title>GitHub Pages Markdown Blog</title>
+    <title>KLLC Blog</title>
+    <link rel="icon" href="https://kllc.github.io/repo/img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -127,7 +127,7 @@
             </a>
           </v-toolbar-title>
           <v-toolbar-title class="ml-2">
-            <a href="./"> GitHub Pages Markdown Blog </a>
+            <a href="./"> KLLC Blog </a>
           </v-toolbar-title>
         </v-app-bar>
 
@@ -144,7 +144,7 @@
               <v-container>
                 <v-row>
                   <v-col
-                    v-for="({ src, img, title, text}, i) in articles"
+                    v-for="({ src, img, title, text, date}, i) in articles"
                     :key="i"
                     cols="12"
                     xs="12"
@@ -166,6 +166,7 @@
                       ></v-img>
                       <v-card-title> {{title||src}} </v-card-title>
                       <v-card-text> {{text}} </v-card-text>
+                      <span style="margin: 16px"> {{date}}</span>
                     </v-card>
                   </v-col>
                 </v-row>
@@ -208,42 +209,50 @@
                       class="pa-4 mb-2"
                       :style="'width:' + side_width + ';'"
                     >
-                      <span class="title"> topic</span>
+                      <span class="title"> Topics</span>
                       <div class="py-1"></div>
                       <v-chip v-for="(item in blogprop.topics" class="ma-1">
                         {{item}}
                       </v-chip>
                     </v-card>
-                    <v-card
-                      elevation="2"
-                      class="pa-4 mb-2"
-                      :style="'width:' + side_width + ';'"
+                    <div
+                      style="
+                        position: -webkit-sticky;
+                        position: sticky;
+                        top: 60px;
+                      "
                     >
-                      <span class="title"> author</span>
-                      <div class="ma-2">
-                        <v-img
-                          class="pa-2"
-                          contain
-                          width="40"
-                          :src="blogprop.author?blogprop.author.avatar?blogprop.author.avatar:image(blogprop.author.name):image(blogprop.src)"
-                        />
-                      </div>
-                      <div class="pa-1">
-                        {{blogprop.author?blogprop.author.name:""}}
-                      </div>
-                      <div class="pa-1">
-                        {{blogprop.author?blogprop.author.message:""}}
-                      </div>
-                    </v-card>
-                    <v-card
-                      v-show="clientWidth > 1280 - 16"
-                      elevation="2"
-                      class="pa-4"
-                      :style="'width:' + side_width + ';'"
-                    >
-                      <span class="title"> index</span>
-                      <div class="toc"></div>
-                    </v-card>
+                      <v-card
+                        elevation="2"
+                        class="pa-4 mb-2"
+                        :style="'width:' + side_width + ';'"
+                      >
+                        <span class="title"> Author</span>
+                        <div class="ma-2">
+                          <v-img
+                            class="pa-2"
+                            contain
+                            width="40"
+                            :src="blogprop.author?blogprop.author.avatar?blogprop.author.avatar:image(blogprop.author.name):image(blogprop.src)"
+                          />
+                        </div>
+                        <div class="pa-1">
+                          {{blogprop.author?blogprop.author.name:""}}
+                        </div>
+                        <div class="pa-1">
+                          {{blogprop.author?blogprop.author.message:""}}
+                        </div>
+                      </v-card>
+                      <v-card
+                        v-show="clientWidth > 1280 - 16"
+                        elevation="2"
+                        class="pa-4"
+                        :style="'width:' + side_width + ';'"
+                      >
+                        <span class="title"> Contents</span>
+                        <div class="toc"></div>
+                      </v-card>
+                    </div>
                   </v-col>
                 </v-row>
               </v-container>
@@ -254,8 +263,8 @@
         <v-footer dark>
           <div class="title font-weight-light grey--text">
             &copy; {{ (new Date()).getFullYear() }} KLLC ||
-            <a href="https://github.com/kllc/blog">
-              https://github.com/kllc/blog</a
+            <a href="https://github.com/kllc/markdown-blog">
+              https://github.com/kllc/markdown-blog</a
             >
             <!-- // If you want to remove the ads, remove this line. -->
             ||<span v-html="ad"></span>
@@ -265,15 +274,11 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/vbnet.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/ir-black.min.css"
-    />
 
     <script type="module">
       import index from "./index.js";
@@ -291,9 +296,9 @@
             bloghtml: "",
             blogprop: {
               id: 0,
-              src: "https://twemoji.maxcdn.com/v/13.0.1/72x72/1f4d8.png",
+              src: "",
               date: "",
-              img: "https://twemoji.maxcdn.com/v/13.0.1/72x72/1f4d8.png",
+              img: "",
               title: "",
               topics: [],
               author: { name: "", avatar: "", message: "" },
@@ -346,10 +351,6 @@
                 return hljs.highlightAuto(code, [lang]).value;
               },
             });
-
-            // Initial processing of highlight.js
-            hljs.initHighlightingOnLoad();
-
             this.bloghtml = marked(res.data);
           }
 
@@ -364,9 +365,19 @@
               headingSelector: "h1, h2, h3",
               hasInnerContainers: true,
             });
+            this.load = true;
           });
-
-          this.load = true;
+        },
+        watch: {
+          // https://qiita.com/miyauchoi/items/73fa77f65b88214d9dba
+          bloghtml: function (val) {
+            this.$nextTick(function () {
+              // Initial processing of highlight.js
+              // https://stackoverflow.com/questions/13094541/how-to-reinitialize-highlight-js
+              hljs.initHighlighting.called = false;
+              hljs.initHighlighting();
+            });
+          },
         },
         methods: {
           _updateDimensions() {
@@ -385,7 +396,6 @@
             return this.emojis[
               Math.floor(this.decimalHash(text) * this.emojis.length)
             ];
-            return "https://twemoji.maxcdn.com/v/13.0.1/72x72/1f4d8.png";
           },
           decimalHash(string) {
             // https://stackoverflow.com/questions/61634063/generate-deterministic-hash-number-between-0-and-1-from-string
@@ -402,11 +412,3 @@
     </script>
   </body>
 </html>
-<!--
-xs	Extra small		< 600px
-sm	Small	600px	600px >< 960px
-md	Medium	960px	960px >< 1,264px*
-lg	Large	1,264px	1,264px* >< 1,904px*
-xl	Extra large	1,904px	> 1,904px*
-*Actual display area is -16px (scrollbar width)
--->

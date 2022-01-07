@@ -1,8 +1,8 @@
 export default () => {
   const index = [
     {
-      src: "md/sample/sample1.md",
-      date: "21.12.29",
+      src: "md/2112/markdown-blog.md",
+      date: "22.1.7",
       title: "<Sample>:Mobile first & Responsive",
       text: "Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. Sed ornare ligula eget tortor tempor, quis porta tellus dictum.",
       img: "https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
