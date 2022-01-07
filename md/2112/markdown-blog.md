@@ -1,26 +1,35 @@
-# 概要
+# 冬休みの自由研究テーマ
 
-markdown で記事を作成して、github にプッシュしてそのままブログになったら便利かも。
-と思って色々試したらできました。
+markdown で記事を作成して、github にプッシュしてそのままブログっぽくなったら便利かなと思いました。
+昨年初めて触った Vue.js を利用した自由研究です。
 
-# 導入した技術
+出来上がったもの
+https://kllc.github.io/markdown-blog/
+
+ソース一式
+https://github.com/kllc/markdown-blog
+
+# 研究で何をしたか（導入した技術）
 
 Vue.js
 Vuetify
-
 ⇒ 　デザイン面が作りやすいので去年知った Vue js を利用
 
 marked
-
 ⇒ 　マークダウンを HTML に変換するライブラリ
 
-Hilight
-
+[highlightjs](https://highlightjs.org/)
 ⇒ 　 Code を VSCode のようにハイライト表示する
 
 Tocbot
+⇒ 　 自動的に目次をつける
 
-⇒ 　 Code を VSCode のようにハイライト表示する
+## npm/yarn で導入する か CDN か
+
+各 jacascript ライブラリは、CDN で導入しています。  
+Vue.js の場合、他のライブラリは npm で導入しないと上手く動かないことがあるので、npm/yarn のほうがいいと思うのですが、GitHub Pages でホストする場合、ソースファイルがシンプルになる CDN のがいいかなと思いました。
+
+全部 CDN で導入したので、以下のようになります。
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
@@ -32,21 +41,31 @@ Tocbot
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/vbnet.min.js"></script>
 ```
 
-各 jacascript ライブラリは、CDN で導入しています。  
-CDN か NMP かという
+# 研究でわかったことや思ったこと
 
-- Vue.js  
-  あああ
-- Vue.js
-- Vue.js
-- Vue.js
+## Vue.js
 
-## 導入したライブラリ
+大好き。
+フロントエンジニアではないので、React も Angular も触ったことないですが、初心者ばかりのプロジェクトでも成果を上げることができました。
+むかし、PHP か Perl かって議論で圧倒的に Perl が人気だったように思いますが、結局今は PHP 案件のが多いですよね。
+簡単な方が生き残ると思います。
 
-https://www.fixes.pub/program/39654.html
+## Vuetify
 
-<details><summary>Qiita(キータ)は、プログラマのための技術情報共有サービスです。</summary>プログラミングに関することをどんどん投稿して、知識を記録、共有しましょう。
-Qiitaに投稿すると、自分のコードやノウハウを見やすい形で残すことができます。
-技術情報はテキストファイルへのメモではなく、タグを付けた文章、シンタックスハイライトされたコードで保存することで初めて再利用可能な知識になる、そうQiitaでは考えています。</details>
+気に入りました。
+Bootstrap みたいなグリッドシステムもいいし、V-card とかも雰囲気がいい。
+でも v-row と v-col で、サイド固定幅メイン可変幅にするやり方が分からなかった。
 
-あ
+```javascript
+side_width() {
+  if (this.clientWidth > 1280 - 16) {
+    return "310px";
+  } else {
+    return "100%";
+  }
+},
+```
+
+# 課題
+
+- だいぶ時間かけて Style いじったけど、もう少し変更必要かな。
