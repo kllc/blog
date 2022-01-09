@@ -123,12 +123,12 @@
               <v-img
                 contain
                 width="40"
-                src="https://twemoji.maxcdn.com/v/13.0.1/72x72/1f4d8.png"
+                src="https://kllc.github.io/repo/img/k.svg"
               />
             </a>
           </v-toolbar-title>
           <v-toolbar-title class="ml-2">
-            <a href="./"> KLLC Blog </a>
+            <a href="./"> Blog </a>
           </v-toolbar-title>
         </v-app-bar>
 
@@ -163,7 +163,7 @@
                       <v-img
                         :src="img?img:image(title||src)"
                         height="200px"
-                        cover
+                        Contain
                       ></v-img>
                       <v-card-title> {{title||src}} </v-card-title>
                       <v-card-text> {{text}} </v-card-text>
@@ -340,6 +340,9 @@
             this.blogprop = this.articles.filter((item) => {
               if (item.src == params.get("src")) return true;
             })[0];
+            if (this.blogprop.anchor) {
+              window.location.href = params.get("src");
+            }
             const res = await axios.get(this.blogprop.src);
             document.title = this.blogprop.title || this.blogprop.src;
 
