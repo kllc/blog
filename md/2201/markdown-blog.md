@@ -49,7 +49,7 @@ export default () => {
 
 ## 目指したこと
 
-- 社内外の知識共有を、無料で簡単に VSCode だけで使って終わらせる。
+- 社内外の知識共有を、無料で簡単に VSCode だけで使って発信可能にする。
   - そのために、Github Pages を使う。
 - [Zenn](https://zenn.dev/) みたいなデザインにする。
 
@@ -59,10 +59,10 @@ export default () => {
 [Vuetify](https://vuetifyjs.com/ja/)
 ⇒ 　デザイン面が作りやすいので去年知った Vue js を利用
 
-[marked.js](https://github.com/markedjs/marked)
+[Marked](https://github.com/markedjs/marked)
 ⇒ 　マークダウンを HTML に変換するライブラリ
 
-[highlightjs](https://highlightjs.org/)
+[highlight.js](https://highlightjs.org/)
 ⇒ 　 Code を VSCode のようにハイライト表示する
 
 [Tocbot](https://tscanlin.github.io/tocbot/)
@@ -100,7 +100,7 @@ Vue.js の場合、他のライブラリは npm で導入しないと上手く�
 
 ## Vue.js
 
-昨年はじめて触ったんですが、Vue js ってすごい。めっちゃ好きになりました。
+昨年はじめて触ったんですが、Vue.js ってすごい。めっちゃ好きになりました。
 React も Angular も触ったことないですが、Vue.js が簡単だと聞きます。
 むかし、PHP か Perl かって議論では圧倒的に Perl のが偉いって感じだったように思いますが、結局今 PHP 案件のほうが多いのは、簡単な方が生き残るからだと思います。
 でも、JQuery と仲が悪くて、喧嘩して JQuery を動けなくしちゃうのは良くない。
@@ -108,7 +108,7 @@ React も Angular も触ったことないですが、Vue.js が簡単だと聞�
 ## Vuetify
 
 今回はじめて触りました。気に入りました。
-Bootstrap みたいなグリッドシステムもいいし、v-card とかも雰囲気がいい。
+Bootstrap みたいなグリッドシステムもいいし、v-card とかもいい感じ。
 でも v-row と v-col で、サイド固定幅メイン可変幅にするやり方が分からなかった。
 結局直接計算して指定。
 
@@ -172,9 +172,9 @@ watch: {
 },
 ```
 
-## tocbot
+## Tocbot
 
-Zenn みたいに、目次を付けられる機能。
+Zenn や Qiita みたいに、目次を付けられる機能。
 https://errormaker.blog.fc2.com/blog-entry-52.html
 
 こちらは思ったより簡単だったけど、ヘッダーがかぶさっちゃうので、目次をクリックして移動したときにそこがヘッダーに隠れてしまう。
@@ -218,7 +218,6 @@ decimalHash(string) {
 
 誰かに使ってもらう前提で、あとからでも変更可能な埋め込み広告エリアを設定してみた。
 ad.js を変更すれば、いつでも埋め込まれた html を変更できる。
-使う場合、できれば残してください。外したければ外して下さい。。
 
 ```html
 <span v-html="ad"></span>
