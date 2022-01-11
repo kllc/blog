@@ -5,7 +5,7 @@ export default () => {
       date: "22.1.11",
       title: "ネットで見つけた無料学習を紹介",
       text: "ネットで見つけた無料学習をメモしておきました。時間があるときにやってみたい。",
-      img: "https://mojimoji3.jp/wp-content/uploads/2018/10/kanzenmuryou-marugo5.png",
+      img: "https://twemoji.maxcdn.com/v/13.1.0/svg/1f193.svg",
       topics: ["free", "javascript", "python", "dynamics"],
       author: {
         name: "K",
@@ -18,7 +18,7 @@ export default () => {
       date: "22.1.9",
       title: "マークダウンをPushしたら、GitHub Pagesにブログができたら便利",
       text: "markdown で記事を作成して、github にプッシュしてそのままブログになったら便利かなと思いました。昨年初めて触った Vue.js を利用した自由研究です。",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_FA6mr7QQivDJBy1p__ibMGnLIM-1zLgAtw&usqp=CAU",
+      img: "https://twemoji.maxcdn.com/v/13.1.0/svg/2603.svg",
       topics: ["vue.js", "vuetify", "marked.js", "highlight.js", "Tocbot"],
       author: {
         name: "K",
