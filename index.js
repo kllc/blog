@@ -1,7 +1,21 @@
 export default () => {
   const index = [
     {
-      src: "md/2201/markdown-blog.md",
+      src: "22/01/education.md",
+      date: "22.1.11",
+      title: "ネットで見つけた無料学習を紹介",
+      text: "ネットで見つけた無料学習をメモしておきました。時間があるときにやってみたい。",
+      img: "https://mojimoji3.jp/wp-content/uploads/2018/10/kanzenmuryou-marugo5.png",
+      topics: ["free", "javascript", "python", "dynamics"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message:
+          "叩き上げのコピペエンジニアです。普段は多重請負の最下層におります。",
+      },
+    },
+    {
+      src: "22/01/markdown-blog.md",
       date: "22.1.9",
       title: "マークダウンをPushしたら、GitHub Pagesにブログができたら便利",
       text: "markdown で記事を作成して、github にプッシュしてそのままブログになったら便利かなと思いました。昨年初めて触った Vue.js を利用した自由研究です。",
