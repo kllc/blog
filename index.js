@@ -10,8 +10,7 @@ export default () => {
       author: {
         name: "K",
         avatar: "https://kllc.github.io/repo/img/user.png",
-        message:
-          "叩き上げのコピペエンジニアです。普段は多重請負の最下層におります。",
+        message: "叩き上げのコピペエンジニアです。",
       },
     },
     {
@@ -24,8 +23,7 @@ export default () => {
       author: {
         name: "K",
         avatar: "https://kllc.github.io/repo/img/user.png",
-        message:
-          "叩き上げのコピペエンジニアです。普段は多重請負の最下層におります。",
+        message: "叩き上げのコピペエンジニアです。",
       },
     },
     {
