@@ -3,8 +3,8 @@ export default () => {
     {
       src: "22/01/education.md",
       date: "22.1.11",
-      title: "ネットで見つけた無料学習を紹介",
-      text: "ネットで見つけた無料学習をメモしておきました。時間があるときにやってみたい。",
+      title: "ネットで見つけた無料学習教材を紹介",
+      text: "ネットで見つけた無料学習教材をメモしておきました。時間があるときにやってみたい。",
       img: "https://twemoji.maxcdn.com/v/13.1.0/svg/1f193.svg",
       topics: ["free", "javascript", "python", "dynamics"],
       author: {
