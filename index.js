@@ -1,6 +1,32 @@
 export default () => {
   const index = [
     {
+      src: "22/01/vantana.md",
+      date: "22.1.17",
+      title: "背景画像",
+      text: "ランディングページの背景画像にいいかも",
+      img: "https://i.gzn.jp/img/2022/01/16/vanta/00_m.png",
+      topics: ["background", "image"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "叩き上げのコピペエンジニアです。",
+      },
+    },
+    {
+      src: "22/01/emoji.md",
+      date: "22.1.17",
+      title: "画像に困ったとき",
+      text: "ブログとかでアイキャッチ画像に困っとき手軽にコピーできる一覧",
+      img: "https://twemoji.maxcdn.com/v/13.1.0/svg/1f472.svg",
+      topics: ["free", "emoji", "twitter", "image"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "叩き上げのコピペエンジニアです。",
+      },
+    },
+    {
       src: "22/01/education.md",
       date: "22.1.11",
       title: "ネットで見つけた無料学習教材を紹介",

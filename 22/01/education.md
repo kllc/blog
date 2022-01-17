@@ -7,8 +7,8 @@
 
 # Javascript
 
-一般社団法人日本オープンオンライン教育推進協議会（JMOOC）がオンライン講座「[Web で学ぶ JavaScript](https://platjam.jmooc.jp/javascript/unit-list)」を開講している。
-講座開講期間は 2022 年 3 月 31 日まで。Google アカウントが必要。
+一般社団法人日本オープンオンライン教育推進協議会（JMOOC）がオンライン講座「[Web で学ぶ JavaScript](https://platjam.jmooc.jp/javascript/unit-list)」を開講しています。
+講座開講期間は 2022 年 3 月 31 日までで、Google アカウントが必要。
 
 参考:
 https://ledge.ai/jmooc-javascript/
