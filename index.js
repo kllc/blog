@@ -1,6 +1,18 @@
 export default () => {
   const index = [
     {
+      src: "22/01/module.md",
+      date: "22.1.24",
+      title: "ライブラリのModule化は難しい",
+      text: "自分で作ったjavascriptライブラリを公開しようと思ったけど、node.js で使えるような、import でも使えるようにしたいし、普通に 外部サイト から読み込めるようにもしてみたい。",
+      topics: ["javascript", "module"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "叩き上げのコピペエンジニアです。",
+      },
+    },
+    {
       src: "22/01/vantana.md",
       date: "22.1.17",
       title: "背景画像",
