@@ -5,6 +5,7 @@ export default () => {
       date: "22.1.24",
       title: "AzureB2Cの使い方",
       text: "AzureB2Cを使った認証の設定方法のまとめ",
+      img: "https://twemoji.maxcdn.com/v/13.1.0/svg/1f324.svg",
       topics: ["AzureB2C", "Azure", "javascript"],
       author: {
         name: "K",
