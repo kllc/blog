@@ -1,6 +1,18 @@
 export default () => {
   const index = [
     {
+      src: "22/01/azureb2c.md",
+      date: "22.1.24",
+      title: "AzureB2Cの使い方",
+      text: "AzureB2Cを使った認証の設定方法のまとめ",
+      topics: ["AzureB2C", "Azure", "javascript"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "叩き上げのコピペエンジニアです。",
+      },
+    },
+    {
       src: "22/01/module.md",
       date: "22.1.24",
       title: "ライブラリのModule化は難しい",
