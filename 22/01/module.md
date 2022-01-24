@@ -52,7 +52,7 @@ Jquery みたいに、CDN から読み込んでそのまま使える状態と、
   }
 })(this, function () {
   // ここに書いていく
-  function PRIVATE_FANCTION() {
+  function PRIVATE_FUNCTION() {
     // 内容
   }
   class EXPORT_CLASS_NAME {
