@@ -88,7 +88,7 @@ AzureB2C の概要の以下の部分です。
 
 - ### Token エンドポイント
 
-概要のエンドポイントを参考にします。
+「アプリの登録」→「エンドポイント」を参考にします。
 \<policy name\> の部分は、ユーザーフロー名です。
 
 ---
@@ -140,4 +140,69 @@ if (rt) {
 
 # リソースサーバーの JWT トークン検証
 
-(作成中)
+## ライブラリの使い方
+
+リソースサーバーで使えるライブラリ作りました。
+この javascript を Azure Function にコピーします。
+
+https://kllc.github.io/repo/script/jwtverify.js
+
+以下 2 つをインストールします
+
+```
+npm install --save jsonwebtoken
+npm install --save jwks-rsa
+```
+
+以下のように使います。
+
+```js
+const JwtVerify = require("./jwtverify.js");
+const b2issuer = process.env.B2C_ISSUER;
+const b2capplicationId = process.env.B2C_APPLICATION_ID;
+const b2cJwksUri = process.env.B2C_JWKSURI;
+
+const jv = new JwtVerify(b2issuer, b2capplicationId, b2cJwksUri);
+
+module.exports = async function (context, req) {
+  const res = await jv.jwt_verify(context, req);
+  if (res.status != 200) {
+    // token検証エラーの場合
+    context.res = res;
+    return;
+  }
+  // token検証成功の場合の処理を書いていく
+};
+```
+
+- B2C_ISSUER
+- B2C_APPLICATION_ID
+- B2C_JWKSURI
+
+は、Azure Function の「構成」で指定するパラメータです。
+
+## パラメータ説明
+
+- ### B2C_ISSUER
+  ユーザーフローから、ユーザーフローの実行を押して、エンドポイントをコピーします。
+  \<domain\>の部分は、AzureB2C テナントのドメイン名が入ります。
+
+---
+
+![](22/01/azureb2c-06.png)
+
+- ### B2C_APPLICATION_ID
+
+AzureB2C の概要の以下の部分です。（クライアントアプリのクライアント ID と同じ）
+
+---
+
+![](22/01/azureb2c-04.png)
+
+- ### B2C_JWKSURI
+
+以下のように組み立てます。
+
+```
+https://[テナント名].b2clogin.com/[テナントID]/[ユーザーフロー名]/discovery/v2.0/keys
+```
