@@ -55,7 +55,7 @@
       }
       .content h1 {
         width: 100%;
-        font-size: 2em;
+        font-size: 2rem;
         border-bottom: 1px solid #999;
       }
       .content p {
@@ -101,8 +101,8 @@
       .content blockquote {
         margin: 0;
         margin-bottom: 16px;
-        border-left: 0.25em solid #dfe2e5;
-        padding: 0 1em;
+        border-left: 0.25rem solid #dfe2e5;
+        padding: 0 1rem;
       }
       .content blockquote > :first-child {
         margin-top: 0;
@@ -142,10 +142,10 @@
               <h2
                 class="display-2 font-weight-bold mb-2 text-uppercase text-center"
               >
-                Blog
+                Note List
               </h2>
 
-              <v-container>
+              <v-container :class="side_padding">
                 <v-row>
                   <v-col
                     v-for="({ src, img, title, text, date}, i) in articles"
@@ -196,9 +196,17 @@
                 </p>
               </v-container>
 
-              <v-container>
+              <v-container :class="side_padding">
                 <v-row>
-                  <v-col cols="12" xs="12" sm="12" md="12" lg="8" xl="8">
+                  <v-col
+                    cols="12"
+                    xs="12"
+                    sm="12"
+                    md="12"
+                    lg="8"
+                    xl="8"
+                    :class="side_padding"
+                  >
                     <v-card
                       elevation="2"
                       class="pa-4"
@@ -207,7 +215,15 @@
                       <div class="content" v-html="bloghtml"></div>
                     </v-card>
                   </v-col>
-                  <v-col cols="12" xs="12" sm="12" md="12" lg="4" xl="4">
+                  <v-col
+                    cols="12"
+                    xs="12"
+                    sm="12"
+                    md="12"
+                    lg="4"
+                    xl="4"
+                    :class="side_padding"
+                  >
                     <v-card
                       elevation="2"
                       class="pa-4 mb-2"
@@ -318,6 +334,13 @@
           };
         },
         computed: {
+          side_padding() {
+            if (this.clientWidth > 960) {
+              return "";
+            } else {
+              return "px-0";
+            }
+          },
           side_width() {
             if (this.clientWidth > 1280 - 16) {
               return "310px";
