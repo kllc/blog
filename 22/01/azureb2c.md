@@ -155,6 +155,8 @@ npm install --save jwks-rsa
 ```
 
 以下のように使います。
+エラーの場合ステータスとメッセージ。
+成功の場合、ID トークンの中身が返却されます。
 
 ```js
 const JwtVerify = require("./jwtverify.js");
@@ -171,7 +173,8 @@ module.exports = async function (context, req) {
     context.res = res;
     return;
   }
-  // token検証成功の場合の処理を書いていく
+  // token検証成功の場合、IDTokenの中身が返却される
+  const openID = res.body;
 };
 ```
 
