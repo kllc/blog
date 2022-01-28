@@ -60,7 +60,6 @@ Azure B2C 自体の設定方法は、下記 の記事のとおりでほぼ問題
 
 https://kllc.github.io/repo/script/adb2cal.js
 
-ライブラリ自体の説明は別途。
 以下のパラメータを渡して使います。
 
 ```javascript
