@@ -126,7 +126,7 @@ if (config) {
   );
   this.data = res;
 } else {
-  window.location.href = b2c.login();
+  window.location.href = await b2c.login();
 }
 ```
 
