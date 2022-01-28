@@ -117,7 +117,7 @@ if (searchParams.has("code")) {
   b2c.config()は、{ headers: { Authorization: 'Bearer ' + id トークン } の形式で返却されます。
 
 ```js
-const config = b2c.config();
+const config = await b2c.config();
 if (config) {
   const res = await this.$axios.$post(
     "http://api.com/api",
@@ -133,7 +133,7 @@ if (config) {
 - ### ID トークンのとり方
 
 ```js
-const it = b2c.get_id_token();
+const it = await b2c.get_id_token();
 ```
 
 - ### リフレッシュトークンのとり方（ログイン中かどうかの判定）
