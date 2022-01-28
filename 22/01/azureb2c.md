@@ -15,7 +15,7 @@
 
 #### ・リソースサーバー
 
-⇒ ここが **_Azure Function_** です。
+⇒ ここは **_Azure Function_** です。
 
 <br />
 
