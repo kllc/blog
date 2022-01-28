@@ -160,7 +160,7 @@ https://kllc.github.io/repo/script/jwtverify.js
 
 以下 2 つをインストールします
 
-```
+```powershell
 npm install --save jsonwebtoken
 npm install --save jwks-rsa
 ```
