@@ -3,14 +3,14 @@ export default () => {
     {
       src: "22/01/azureb2c.md",
       date: "22.1.24",
-      title: "AzureB2Cの使い方",
-      text: "AzureB2Cを使った認証の設定方法のまとめ",
+      title: "Azure B2C での OpenID Connect による Web サインイン",
+      text: "AzureB2Cを使った OpenID Connect による認証の設定方法まとめです。",
       img: "https://bloksec.io/assets/AzureB2C.png",
       topics: ["AzureB2C", "Azure", "javascript"],
       author: {
         name: "K",
         avatar: "https://kllc.github.io/repo/img/user.png",
-        message: "叩き上げのコピペエンジニアです。",
+        message: "コピペエンジニアです。",
       },
     },
     {
@@ -22,7 +22,7 @@ export default () => {
       author: {
         name: "K",
         avatar: "https://kllc.github.io/repo/img/user.png",
-        message: "叩き上げのコピペエンジニアです。",
+        message: "コピペエンジニアです。",
       },
     },
     {
@@ -35,7 +35,7 @@ export default () => {
       author: {
         name: "K",
         avatar: "https://kllc.github.io/repo/img/user.png",
-        message: "叩き上げのコピペエンジニアです。",
+        message: "コピペエンジニアです。",
       },
     },
     {
@@ -48,7 +48,7 @@ export default () => {
       author: {
         name: "K",
         avatar: "https://kllc.github.io/repo/img/user.png",
-        message: "叩き上げのコピペエンジニアです。",
+        message: "コピペエンジニアです。",
       },
     },
     {
@@ -61,7 +61,7 @@ export default () => {
       author: {
         name: "K",
         avatar: "https://kllc.github.io/repo/img/user.png",
-        message: "叩き上げのコピペエンジニアです。",
+        message: "コピペエンジニアです。",
       },
     },
     {
@@ -74,7 +74,7 @@ export default () => {
       author: {
         name: "K",
         avatar: "https://kllc.github.io/repo/img/user.png",
-        message: "叩き上げのコピペエンジニアです。",
+        message: "コピペエンジニアです。",
       },
     },
     {

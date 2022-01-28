@@ -11,7 +11,7 @@
 
 #### ・クライアントアプリ
 
-⇒ ここが **_nuxt.js_** で作ったサンプルです。でも普通の javascript で説明しています。
+⇒ ここは普通の **_javascipt_** です。
 
 #### ・リソースサーバー
 
@@ -113,11 +113,22 @@ if (searchParams.has("code")) {
 }
 ```
 
-- ### axios の config 設定
+- ### Authorization ヘッダー の設定
   トークンが取れない場合は false が返るので、ログイン画面などに遷移させる。
+  b2c.config()は、{ headers: { Authorization: 'Bearer ' + id トークン } の形式で返却されます。
 
 ```js
 const config = b2c.config();
+if (config) {
+  const res = await this.$axios.$post(
+    "http://api.com/api",
+    '{"data":"test"}',
+    config
+  );
+  this.data = res;
+} else {
+  window.location.href = b2c.login();
+}
 ```
 
 - ### ID トークンのとり方
