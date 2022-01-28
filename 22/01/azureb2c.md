@@ -63,7 +63,7 @@ https://kllc.github.io/repo/script/adb2cal.js
 以下のパラメータを渡して使います。
 
 ```javascript
-import ADB2CAL from "~/azureb2c";
+import ADB2CAL from "~/adb2cal";
 const b2c = new ADB2CAL("ログインURL", "クライアントID", "Tokenエンドポイント");
 ```
 
