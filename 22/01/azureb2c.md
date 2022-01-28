@@ -141,7 +141,6 @@ const it = b2c.get_id_token();
 ```js
 const rt = b2c.get_refresh_token();
 if (rt) {
-  await b2c.refresh_id_token(rt);
   this.log_in = true;
 }
 ```
