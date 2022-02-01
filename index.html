@@ -316,7 +316,7 @@
             bloghtml: "",
             blogprop: {
               id: 0,
-              src: "",
+              src: "note",
               date: "",
               img: "",
               title: "",
@@ -362,6 +362,25 @@
           const url = new URL(window.location.href);
           const params = url.searchParams;
 
+          // Setting up marked.js
+          marked.setOptions({
+            breaks: true,
+
+            // Highlighting with highlight.js
+            highlight: function (code, lang) {
+              return hljs.highlightAuto(code, [lang]).value;
+            },
+          });
+
+          if (params.get("prop")) {
+            this.blogprop = await this.base64DecodeAsBlob(params.get("prop"));
+          }
+
+          if (params.get("html")) {
+            const res = await this.base64DecodeAsBlob(params.get("html"));
+            this.bloghtml = marked(res);
+          }
+
           if (params.get("src")) {
             const blogprop = this.articles.filter((item) => {
               if (item.src == params.get("src")) return true;
@@ -377,15 +396,6 @@
             const res = await axios.get(this.blogprop.src);
             document.title = this.blogprop.title || this.blogprop.src;
 
-            // Setting up marked.js
-            marked.setOptions({
-              breaks: true,
-
-              // Highlighting with highlight.js
-              highlight: function (code, lang) {
-                return hljs.highlightAuto(code, [lang]).value;
-              },
-            });
             this.bloghtml = marked(res.data);
           }
 
@@ -438,6 +448,11 @@
             for (let i = 0; i < string.length; i++)
               sum += ((i + 1) * string.codePointAt(i)) / (1 << 8);
             return sum % 1;
+          },
+          async base64DecodeAsBlob(text, type = "text/plain;charset=UTF-8") {
+            return fetch(`data:${type};base64,` + text).then((response) =>
+              response.blob()
+            );
           },
         },
         destroyed() {
