@@ -373,12 +373,15 @@
           });
 
           if (params.get("prop")) {
-            this.blogprop = await this.base64DecodeAsBlob(params.get("prop"));
+            this.blogprop = decodeURIComponent(
+              escape(window.atob(params.get("prop")))
+            );
           }
 
           if (params.get("html")) {
-            const res = await this.base64DecodeAsBlob(params.get("html"));
-            this.bloghtml = marked(res);
+            this.blogprop = decodeURIComponent(
+              escape(window.atob(params.get("html")))
+            );
           }
 
           if (params.get("src")) {
@@ -448,11 +451,6 @@
             for (let i = 0; i < string.length; i++)
               sum += ((i + 1) * string.codePointAt(i)) / (1 << 8);
             return sum % 1;
-          },
-          async base64DecodeAsBlob(text, type = "text/plain;charset=UTF-8") {
-            return fetch(`data:${type};base64,` + text).then((response) =>
-              response.blob()
-            );
           },
         },
         destroyed() {
