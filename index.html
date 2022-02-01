@@ -363,15 +363,19 @@
           const params = url.searchParams;
 
           if (params.get("src")) {
-            this.blogprop = this.articles.filter((item) => {
+            const blogprop = this.articles.filter((item) => {
               if (item.src == params.get("src")) return true;
             })[0];
-            if (this.blogprop && this.blogprop.anchor) {
+            if (blogprop) {
+              this.blogprop = blogprop;
+            } else {
+              this.blogprop.src = params.get("src");
+            }
+            if (this.blogprop.anchor) {
               window.location.href = params.get("src");
             }
-            const res = await axios.get(params.get("src"));
-            document.title =
-              (this.blogprop && this.blogprop.title) || params.get("src");
+            const res = await axios.get(this.blogprop.src);
+            document.title = this.blogprop.title || this.blogprop.src;
 
             // Setting up marked.js
             marked.setOptions({
