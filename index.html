@@ -374,7 +374,7 @@
 
           if (params.get("prop")) {
             this.blogprop = JSON.parse(
-              '{src:"urlencode",' +
+              '{"src":"urlencode",' +
                 decodeURIComponent(
                   escape(window.atob(decodeURIComponent(params.get("prop"))))
                 ) +
