@@ -58,7 +58,9 @@
                 label="Property"
                 class="ma-4"
               ></v-textarea>
-              <v-btn elevation="2" class="ma-4" @click="copyurl"></v-btn>
+              <v-btn elevation="2" class="ma-4" @click="copyurl"
+                >リンクをコピー＆開く</v-btn
+              >
             </section>
           </v-container>
         </v-main>
@@ -110,7 +112,8 @@
           copyurl() {
             if (navigator.clipboard) {
               navigator.clipboard.writeText(this.blogurl).then(function () {
-                alert("コピーしました。");
+                alert("コピーしました。ブログを開きます。");
+                window.open(this.blogurl);
               });
             }
           },
