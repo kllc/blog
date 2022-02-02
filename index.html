@@ -373,15 +373,11 @@
           });
 
           if (params.get("prop")) {
-            this.blogprop = decodeURIComponent(
-              escape(window.atob(params.get("prop")))
-            );
+            this.blogprop = decodeURIComponent(params.get("prop"));
           }
 
           if (params.get("html")) {
-            this.blogprop = decodeURIComponent(
-              escape(window.atob(params.get("html")))
-            );
+            this.blogprop = decodeURIComponent(params.get("html"));
           }
 
           if (params.get("src")) {
