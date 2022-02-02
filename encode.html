@@ -77,7 +77,7 @@
           return {
             md: "",
             prop: `"date": "22.22.22",
-"title": "タイトル",
+"title": "Note",
 "text": "テキスト",
 "img": "",
 "topics": [""],
@@ -92,9 +92,9 @@
           blogurl: function () {
             return (
               "https://kllc.github.io/blog/?html=" +
-              LZString.compressToBase64(this.md) +
+              LZString.compressToEncodedURIComponent(this.md) +
               "&prop=" +
-              LZString.compressToBase64(this.prop)
+              LZString.compressToEncodedURIComponent(this.prop)
               // "https://kllc.github.io/blog/?html=" +
               // encodeURIComponent(btoa(unescape(encodeURIComponent(this.md)))) +
               // "&prop=" +
