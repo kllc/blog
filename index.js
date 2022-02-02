@@ -78,6 +78,10 @@ export default () => {
       },
     },
     {
+      src: "encode.html",
+      anchor: true,
+    },
+    {
       src: "https://blog.kllc.jp/",
       anchor: true,
       date: "22.1.1",
