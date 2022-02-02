@@ -377,21 +377,15 @@
             this.blogprop = JSON.parse(
               '{"src":"urlencode",' +
                 LZString.decompressFromEncodedURIComponent(params.get("prop")) +
-                // decodeURIComponent(
-                //   escape(window.atob(decodeURIComponent(params.get("prop"))))
-                // ) +
                 "}"
             );
+            document.title = this.blogprop.title;
           }
 
           if (params.get("html")) {
             this.bloghtml = marked(
               LZString.decompressFromEncodedURIComponent(params.get("html"))
             );
-
-            // decodeURIComponent(
-            //   escape(window.atob(decodeURIComponent(params.get("html"))))
-            // )
           }
 
           if (params.get("src")) {
