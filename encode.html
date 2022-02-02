@@ -92,9 +92,9 @@
           blogurl: function () {
             return (
               "https://kllc.github.io/blog/?html=" +
-              LZString.compress(this.md) +
+              LZString.compressToBase64(this.md) +
               "&prop=" +
-              LZString.compress(this.prop)
+              LZString.compressToBase64(this.prop)
               // "https://kllc.github.io/blog/?html=" +
               // encodeURIComponent(btoa(unescape(encodeURIComponent(this.md)))) +
               // "&prop=" +
