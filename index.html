@@ -299,6 +299,7 @@
     <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/vbnet.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/pieroxy/lz-string/libs/lz-string.js"></script>
 
     <script type="module">
       import index from "./index.js";
@@ -375,19 +376,20 @@
           if (params.get("prop")) {
             this.blogprop = JSON.parse(
               '{"src":"urlencode",' +
-                decodeURIComponent(
-                  escape(window.atob(decodeURIComponent(params.get("prop"))))
-                ) +
+                LZString.decompress(params.get("prop")) +
+                // decodeURIComponent(
+                //   escape(window.atob(decodeURIComponent(params.get("prop"))))
+                // ) +
                 "}"
             );
           }
 
           if (params.get("html")) {
-            this.bloghtml = marked(
-              decodeURIComponent(
-                escape(window.atob(decodeURIComponent(params.get("html"))))
-              )
-            );
+            this.bloghtml = marked(LZString.decompress(params.get("html")));
+
+            // decodeURIComponent(
+            //   escape(window.atob(decodeURIComponent(params.get("html"))))
+            // )
           }
 
           if (params.get("src")) {

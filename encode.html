@@ -67,6 +67,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/pieroxy/lz-string/libs/lz-string.js"></script>
 
     <script type="module">
       new Vue({
@@ -75,15 +76,15 @@
         data() {
           return {
             md: "",
-            prop: `date: '22.22.22',
-title: 'タイトル',
-text: 'テキスト',
-img: '',
-topics: [''],
-author: {
-  name: 'K',
-  avatar: 'https://kllc.github.io/repo/img/user.png',
-  message: 'コピペエンジニアです。'
+            prop: `"date": "22.22.22",
+"title": "タイトル",
+"text": "テキスト",
+"img": "",
+"topics": [""],
+"author": {
+  "name": "K",
+  "avatar": "https://kllc.github.io/repo/img/user.png",
+  "message": "コピペエンジニアです。"
 }`,
           };
         },
@@ -91,9 +92,13 @@ author: {
           blogurl: function () {
             return (
               "https://kllc.github.io/blog/?html=" +
-              encodeURIComponent(btoa(unescape(encodeURIComponent(this.md)))) +
+              LZString.compress(this.md) +
               "&prop=" +
-              encodeURIComponent(btoa(unescape(encodeURIComponent(this.prop))))
+              LZString.compress(this.prop)
+              // "https://kllc.github.io/blog/?html=" +
+              // encodeURIComponent(btoa(unescape(encodeURIComponent(this.md)))) +
+              // "&prop=" +
+              // encodeURIComponent(btoa(unescape(encodeURIComponent(this.prop))))
             );
           },
         },
