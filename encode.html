@@ -55,7 +55,7 @@
               <v-textarea
                 outlined
                 v-model="blogurl"
-                label="Property"
+                label="Link"
                 class="ma-4"
               ></v-textarea>
               <v-btn elevation="2" class="ma-4" @click="copyurl"
@@ -111,11 +111,10 @@
         methods: {
           copyurl() {
             if (navigator.clipboard) {
-              navigator.clipboard.writeText(this.blogurl).then(function () {
-                alert("コピーしました。ブログを開きます。");
-                window.open(this.blogurl);
-              });
+              navigator.clipboard.writeText(this.blogurl).then(function () {});
             }
+            alert("コピーしました。ブログを開きます。");
+            window.open(this.blogurl);
           },
         },
         destroyed() {},
