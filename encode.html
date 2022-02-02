@@ -48,16 +48,17 @@
               ></v-textarea>
               <v-textarea
                 outlined
-                v-model="encode"
-                label="Encode"
+                v-model="prop"
+                label="Property"
                 class="ma-4"
               ></v-textarea>
               <v-textarea
                 outlined
-                v-model="decode"
-                label="Encode"
+                v-model="blogurl"
+                label="Property"
                 class="ma-4"
               ></v-textarea>
+              <v-btn elevation="2" class="ma-4" @click="copyurl"></v-btn>
             </section>
           </v-container>
         </v-main>
@@ -74,44 +75,40 @@
         data() {
           return {
             md: "",
+            prop: `date: '22.22.22',
+title: 'タイトル',
+text: 'テキスト',
+img: '',
+topics: ['',],
+author: {
+  name: 'K',
+  avatar: 'https://kllc.github.io/repo/img/user.png',
+  message: 'コピペエンジニアです。',
+},`,
           };
         },
         computed: {
-          encode: function () {
-            return encodeURIComponent(
-              btoa(unescape(encodeURIComponent(this.md)))
-            );
-          },
-          decode: function () {
-            return decodeURIComponent(
-              escape(atob(decodeURIComponent(this.encode)))
+          blogurl: function () {
+            return (
+              "https://kllc.github.io/blog/?html=" +
+              encodeURIComponent(btoa(unescape(encodeURIComponent(this.md)))) +
+              "&prop=" +
+              encodeURIComponent(btoa(unescape(encodeURIComponent(this.prop))))
             );
           },
         },
-        async mounted() {
-          this.$nextTick(() => {
-            this.updateDimensions();
-            window.addEventListener("resize", this.updateDimensions, {
-              passive: true,
-            });
-          });
-        },
+        async mounted() {},
         watch: {},
         methods: {
-          updateDimensions() {
-            this.clientWidth = Math.max(
-              document.documentElement.clientWidth,
-              window.innerWidth || 0
-            );
-            this.clientHeight = Math.max(
-              document.documentElement.clientHeight,
-              window.innerHeight || 0
-            );
+          copyurl() {
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(this.blogurl).then(function () {
+                alert("コピーしました。");
+              });
+            }
           },
         },
-        destroyed() {
-          window.removeEventListener("resize", this._updateDimensions);
-        },
+        destroyed() {},
       });
     </script>
   </body>
