@@ -38,29 +38,29 @@
     <div id="app">
       <v-app>
         <v-main class="grey lighten-5">
-          <v-container fluid>
+          <v-container fluid class="pa-4">
+            以下にマークダウンをいれたら、ブログが出来上がります。<br />
+            マークダウンをURLエンコードしてパラメータにして渡しているので、サーバに保存せずにそのまま出来上がる仕組みです。
             <section>
               <v-textarea
                 outlined
                 v-model="md"
                 label="Markdown"
-                class="ma-4"
+                class="my-4"
               ></v-textarea>
               <v-textarea
                 outlined
                 v-model="prop"
                 label="Property"
-                class="ma-4"
+                class="my-4"
               ></v-textarea>
               <v-textarea
                 outlined
                 v-model="blogurl"
                 label="Link"
-                class="ma-4"
+                class="my-4"
               ></v-textarea>
-              <v-btn elevation="2" class="ma-4" @click="copyurl"
-                >リンクをコピー＆開く</v-btn
-              >
+              <v-btn elevation="2" @click="copyurl">リンクをコピー＆開く</v-btn>
             </section>
           </v-container>
         </v-main>
