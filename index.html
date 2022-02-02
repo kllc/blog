@@ -377,7 +377,9 @@
           }
 
           if (params.get("html")) {
-            this.bloghtml = decodeURIComponent(params.get("html"));
+            this.bloghtml = decodeURIComponent(
+              escape(window.atob(params.get("html")))
+            );
           }
 
           if (params.get("src")) {
