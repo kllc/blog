@@ -373,8 +373,12 @@
           });
 
           if (params.get("prop")) {
-            this.blogprop = decodeURIComponent(
-              escape(window.atob(decodeURIComponent(params.get("prop"))))
+            this.blogprop = JSON.parse(
+              '{src:"urlencode"' +
+                decodeURIComponent(
+                  escape(window.atob(decodeURIComponent(params.get("prop"))))
+                ) +
+                "}"
             );
           }
 
