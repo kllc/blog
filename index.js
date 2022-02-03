@@ -1,6 +1,17 @@
 export default () => {
   const index = [
     {
+      src: "azureapp.md",
+      date: "22.2.3",
+      title: "Azure App Service の web.config 設定",
+      topics: ["Azure", "App Service"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです。",
+      },
+    },
+    {
       src: "22/01/azureb2c.md",
       date: "22.1.24",
       title: "Azure B2C での OpenID Connect による Web サインイン",
