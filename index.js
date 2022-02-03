@@ -1,7 +1,7 @@
 export default () => {
   const index = [
     {
-      src: "azureapp.md",
+      src: "22/02/azureapp.md",
       date: "22.2.3",
       title: "Azure App Service の web.config 設定",
       topics: ["Azure", "App Service"],
