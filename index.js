@@ -1,6 +1,18 @@
 export default () => {
   const index = [
     {
+      src: "22/02/vm.md",
+      date: "22.2.6",
+      title: "Azure VM を別のテナントに移動",
+      text: "Azure VM を別のテナントに移動したとき、ハマったポイントです。",
+      topics: ["Azure", "App Service"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです。",
+      },
+    },
+    {
       src: "22/02/azureapp.md",
       date: "22.2.3",
       title: "Azure App Service の web.config 設定",
