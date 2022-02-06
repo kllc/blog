@@ -26,7 +26,7 @@ New-AzDisk のコマンドにパラメータを入れても動かなかったけ
 
 -Disk $DiskConfig 　のところに入れたら動きました。
 
-```powershell
+```
 # VHDの移動
 
 login-AzAccount
