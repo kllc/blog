@@ -1,9 +1,9 @@
 # 概要
 
-仮想マシンを別のテナントに移したかったが、面倒だなと思ってたけど、頑張って power shell でやってみたけど、案の定ハマった。
-でも、がっつりハマったポイントは、１個だけ。
+仮想マシンを別のテナントに移したくて、面倒だなと思ってずっとやってなかったのですが、頑張って power shell でやってみました。
+案の定ハマりましたが、ハマったポイントは、１個だけ。
 
-基本は以下 URL の説明の通りで問題なかった。
+基本は以下 URL の説明の通りで問題なかったです。
 
 [Azure Virtual Machine を別テナントの Azure 環境に移してみた](https://www.tama-negi.com/2020/01/12/disk_vhd/)
 
@@ -22,7 +22,7 @@ New-AzDisk が storageAccountId 　を指定しろとのこと。
 
 [getting-error-quotcreating-a-managed-disk-from-the-upload-vhdquot](https://social.msdn.microsoft.com/Forums/SqlServer/en-US/e562a8c3-ccf0-4c39-ac06-82ba49df94b7/getting-error-quotcreating-a-managed-disk-from-the-upload-vhdquot?forum=WAVirtualMachinesforWindows)
 
-パラメータをちゃんと入れても動かなかったけど・・
+New-AzDisk のコマンドにパラメータを入れても動かなかったけど・・
 
 -Disk $DiskConfig 　のところに入れたら動きました。
 
