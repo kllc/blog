@@ -5,7 +5,8 @@ export default () => {
       date: "22.2.6",
       title: "Azure VM を別のテナントに移動",
       text: "Azure VM を別のテナントに移動したとき、ハマったポイントです。",
-      topics: ["Azure", "App Service"],
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png",
+      topics: ["Azure", "VM"],
       author: {
         name: "K",
         avatar: "https://kllc.github.io/repo/img/user.png",
@@ -16,6 +17,7 @@ export default () => {
       src: "22/02/azureapp.md",
       date: "22.2.3",
       title: "Azure App Service の web.config 設定",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png",
       topics: ["Azure", "App Service"],
       author: {
         name: "K",
