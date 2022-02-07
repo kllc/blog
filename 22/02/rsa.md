@@ -80,11 +80,11 @@ RSA 暗号の信頼性は、素因数分解の困難さと、素因数分解以�
 # これら性質の応用
 
 上記のようなこの３つの数値の組み合わせの性質を使って、いろんなこと出来ます。
-ルート証明書が一番重要な技術じゃないかと思いました。
+証明書チェーンが一番重要な技術じゃないかと思いました。
 
 記事：[公開鍵暗号](https://jprs.jp/glossary/index.php?ID=0226)
 記事：[電子署名](https://esac.jipdec.or.jp/why-e-signature/PKI-crypto-mechanism.html#:~:text=%E5%85%AC%E9%96%8B%E9%8D%B5%E7%94%A8%E3%81%84%E3%81%A6%E7%BD%B2%E5%90%8D,%E3%81%A8%E5%91%BC%E3%81%B6%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82)
-記事：[ルート証明書](https://qiita.com/TakahikoKawasaki/items/4c35ac38c52978805c69)
+記事：[証明書チェーン](https://qiita.com/TakahikoKawasaki/items/4c35ac38c52978805c69)
 
 # きっかけ
 
