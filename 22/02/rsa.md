@@ -45,15 +45,16 @@ E = 7 , D = 3 , N = 33 　がこの組み合わせです。
 
 ## 性質２の証明
 
-素因数分解の困難さが根拠だそうです。
-　記事：[RSA 暗号の仕組み](https://qiita.com/YutaKase6/items/cd9e26d723809dc85928)
 仕組み全体の証明を得るには、オイラーとか、フェルマーとかでてきます。。信頼するしかない。
+
+記事：[RSA 暗号の仕組み](https://qiita.com/YutaKase6/items/cd9e26d723809dc85928)
 
 ## 性質３の証明
 
 D と N が十分に大きい数字であれば、余りと商から、累乗された元の数値は特定できないということなのかな。
-　記事：[RSA 暗号](https://sehermitage.web.fc2.com/cmath/rsa.html)
 さらに工夫することで一方向性を高めているようです。
+
+記事：[RSA 暗号](https://sehermitage.web.fc2.com/cmath/rsa.html)
 
 （備考）
 RSA 暗号の公開鍵の一方向性について、上記の他には説明した記事が見つけられなかったのですが
