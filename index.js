@@ -3,7 +3,7 @@ export default () => {
     {
       src: "22/02/rsa.md",
       date: "22.2.7",
-      title: "RSA暗号を理解したった",
+      title: "RSA暗号を理解する",
       text: "RSA暗号を理解したかったのですが、RSA 暗号の入り口だけを理解することにしました。",
       img: "https://ssl.sakura.ad.jp/column/images/column_decoding-rsa@2x.png",
       topics: ["RSA"],
