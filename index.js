@@ -5,7 +5,7 @@ export default () => {
       date: "22.3.15",
       title: "MIME Type を Javascript で変更する",
       text: "ファイルがブラウザで開かれるか、ダウンロードされるかの動作を Javascrfipt だけで変更してみました",
-      img: "https://wa3.i-3-i.info/img/data/5700/d005786-3.png",
+      img: "https://p.e-words.jp/img/MIME.jpg",
       topics: ["MIME Type"],
       author: {
         name: "K",
