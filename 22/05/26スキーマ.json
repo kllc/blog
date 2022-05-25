@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "d": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "object",
+          "properties": {
+            "PrimaryQueryResult": {
+              "type": "object",
+              "properties": {
+                "RelevantResults": {
+                  "type": "object",
+                  "properties": {
+                    "Table": {
+                      "type": "object",
+                      "properties": {
+                        "Rows": {
+                          "type": "object",
+                          "properties": {
+                            "results": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Cells": {
+                                    "type": "object",
+                                    "properties": {
+                                      "results": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "Key": {},
+                                            "Value": {},
+                                            "ValueType": {}
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

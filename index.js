@@ -1,6 +1,14 @@
 export default () => {
   const index = [
     {
+      src: "22/05/26委任勉強会.html#1",
+      date: "22.5.26",
+      title: "Power Apps キャンバスアプリ SharePoint検索",
+      text: "Power Apps キャンバスアプリ ＋ SharePoint の構成での、検索における委任の問題を、SharePoint Rest API を使用して解決する方法の紹介です。",
+      img: "https://template-free.biz/wp-content/uploads/2021/08/1-e1630074416324-678x381-1630074455.jpg",
+      anchor: true,
+    },
+    {
       src: "22/03/mimetype.md",
       date: "22.3.15",
       title: "MIME Type を Javascript で変更する",
