@@ -1,7 +1,7 @@
 export default () => {
   const index = [
     {
-      src: "22/05/26delegate.html",
+      src: "22/05/26委任勉強会.html",
       anchor: true,
       date: "22.5.26",
       title: "キャンバスアプリでSharePoint検索",
