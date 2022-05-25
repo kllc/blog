@@ -1,7 +1,8 @@
 export default () => {
   const index = [
+    // src はアルファベットのみで設定
     {
-      src: "22/05/26delegate.html#2",
+      src: "22/05/26delegate.html",
       anchor: true,
       date: "22.5.26",
       title: "キャンバスアプリでSharePoint検索",
