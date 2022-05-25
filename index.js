@@ -1,6 +1,5 @@
 export default () => {
   const index = [
-    // src はアルファベットのみで設定
     {
       src: "22/05/26delegate.html",
       anchor: true,
@@ -22,7 +21,6 @@ export default () => {
         message: "コピペエンジニアです",
       },
     },
-
     {
       src: "22/02/rsa.md",
       date: "22.2.7",
