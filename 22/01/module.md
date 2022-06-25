@@ -51,7 +51,7 @@ Jquery みたいに、CDN から読み込んでそのまま使える状態と、
   } else {
     global.EXPORT_CLASS_NAME = factory();
   }
-})(this, function () {
+})(typeof self !== "undefined" ? self : this, function () {
   // ここに書いていく
   function PRIVATE_FUNCTION() {
     // 内容
