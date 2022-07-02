@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "22/06/azurefunction.md",
+      date: "22.6.30",
+      title: "Java で Azure Functions を作る",
+      text: "Azure Function を作る必要があったのですが、コピペ元が Java だったため、仕方なく Java で Azure Function を作ろうとしたらハマったのでその記録です",
+      img: "https://i0.wp.com/gregorsuttie.com/wp-content/uploads/2021/08/azurefunctions.png?fit=321%2C157&ssl=1",
+      topics: ["Functions"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "22/05/26委任勉強会.html",
       anchor: true,
       date: "22.5.26",
