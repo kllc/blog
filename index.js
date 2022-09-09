@@ -2,6 +2,7 @@ export default () => {
   const index = [
     {
       src: "22/09/08PowerPlatform.html",
+      anchor: true,
       date: "22.9.8",
       title: "Power Platform リリース計画について",
       text: "Power Platform リリース計画について説明する勉強会です",
@@ -33,6 +34,7 @@ export default () => {
       title: "キャンバスアプリでSharePoint検索",
       text: "Power Apps キャンバスアプリ ＋ SharePoint の構成での、検索における委任の問題を、SharePoint Rest API を使用して解決する方法の紹介です。",
       img: "https://template-free.biz/wp-content/uploads/2021/08/1-e1630074416324-678x381-1630074455.jpg",
+      topics: ["Power Platform"],
     },
     {
       src: "22/03/mimetype.md",
