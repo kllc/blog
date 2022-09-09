@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "22/09/08PowerPlatform.html",
+      date: "22.9.8",
+      title: "Power Platform リリース計画について",
+      text: "Power Platform リリース計画について説明する勉強会です",
+      img: "https://images.ctfassets.net/6hm9tr1vnfzt/403pJQE91bU9lx0Niobvr0/985d6ff9dd3508f091186e301aedfdab/blade4_img_d.jpg",
+      topics: ["Power Platform"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "22/06/azurefunction.md",
       date: "22.6.30",
       title: "Java で Azure Functions を作る",
