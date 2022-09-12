@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        #app {
+            margin: 5%;
+            font-size: 3em;
+        }
+        input {
+            font-size: 100%;
+            width: 60%;
+        }
+        button {
+            font-size: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input v-model="urltxt">
+        <div>{{postjson[0].time}}</div>
+        <div>{{postjson[0].number}}</div>
+        <button @click="loop()">実行</button>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    urltxt:"https://api.powerbi.com/beta/586cfd3c-1a8f-4da9-b77c-36fd31f96a6d/datasets/3540a5b4-6223-487d-801f-af49baa93a3f/rows?tenant=586cfd3c-1a8f-4da9-b77c-36fd31f96a6d&UPN=kijima%40kllc.jp&key=hi9TciOjRTxdtbq%2BZyF2Rpsehm0iNJffKBkY8IGrrysRWoXgENIdGPEoCxz2u18VSqa08cgpDVeE1Md2jkVdmw%3D%3D",
+//                    urltxt:"https://api.powerbi.com/beta/586cfd3c-1a8f-4da9-b77c-36fd31f96a6d/datasets/c775356b-4a55-469a-b9ff-6a703d3a7a38/rows?key=eDPe9s19fPXIXSKRXcE9MWo4AiLZSXV8Ag8hwcrX%2FCZDBYnQlh7xSYvUVpIwJPenyo1klozjW0vpkAmjX4%2Fz3Q%3D%3D",
+                    postjson: [
+                        {
+                            "number": 0,
+                            "time": "",
+                        }
+                    ],
+                }
+            },
+            methods: {
+                test: function () {
+                    axios.post(this.urltxt, this.postjson)
+                },
+                loop: function () {
+
+                    var nowtime = new Date();
+                    this.postjson[0].time = nowtime.toISOString();
+                    this.postjson[0].number = Math.random() * 100;
+
+                    this.test();
+
+                    setTimeout(() => {
+                        this.loop();
+
+                    }, 1000);
+                }
+
+            },
+
+        });
+    </script>
+
+</body>
+
+</html>
