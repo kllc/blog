@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <style>
+      body {
+        font-family: "Noto Sans JP", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <v-app v-show="load" style="display: none">
+        <v-main>
+          <section id="blog">
+            <div class="py-12"></div>
+            <v-container>
+              <h2
+                class="
+                  display-2
+                  font-weight-bold
+                  mb-3
+                  text-uppercase text-center
+                "
+              >
+                速く合同会社作成する時の雛形
+              </h2>
+
+              <v-responsive class="mx-auto mb-12" width="56">
+                <v-divider class="mb-1"></v-divider>
+
+                <v-divider></v-divider>
+              </v-responsive>
+
+              <v-row>
+                <v-col
+                  v-for="({ src ,text, title }, i) in articles"
+                  :key="i"
+                  cols="12"
+                  md="4"
+                >
+                  <h3
+                    class="font-weight-black mb-4 text-uppercase"
+                    v-text="title"
+                  ></h3>
+
+                  <div class="title font-weight-light mb-5" v-text="text"></div>
+                  <v-btn color="grey" :href="src" outlined large>
+                    <span class="grey--text text--darken-1 font-weight-bold">
+                      Download
+                    </span>
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-container>
+            <div class="py-12"></div>
+          </section>
+
+      </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data() {
+          return {
+            load: false,
+            articles: [
+              {
+                src:"定款.doc",
+                title: "定款",
+                text: "とりあえずの定款雛形です。事業内容によって変更が必要。",
+              },
+              {
+                src: "登記すべき事項.zip",
+                title: "登記すべき事項",
+                text: "しょうもないテキストファイルだけど、この情報が登記されるので一番重要。",
+              },
+              {
+                src: "代表社員，本店所在地及び資本金決定書.docx",
+                title: "代表社員，本店所在地及び資本金決定書",
+                text: "社員が代表社員、本店所在地及び資本金を決定する書面。雛形通りで問題ない。",
+              },
+              {
+                src: "代表社員の就任承諾書.doc",
+                title: "代表社員の就任承諾書",
+                text: "代表社員の就任承諾書です。雛形通りで問題ない。",
+              },
+              {
+                src: "領収書.doc",
+                title: "払込みがあったことを証する書面",
+                text: "代表社員が作成した出資金領収書で差し支えない。雛形通りで問題ない。",
+              },
+              {
+                src: "https://www.moj.go.jp/content/001339673.pdf",
+                title: "印鑑届出書",
+                text: "オンラインの場合は、スキャンして使うそうです。",
+              },
+              
+            ],
+          };
+        },
+        mounted() {
+          this.load = true;
+        },
+      });
+    </script>
+  </body>
+</html>
