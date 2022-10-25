@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "22/10/25cors.md",
+      date: "22.10.25",
+      title: "Azure CLI で CORS設定",
+      text: "Azure CLI なんていつ使うのと思ってましたが、CORS 設定を Azure CLI でやることがあるそうです。",
+      img: "https://i0.wp.com/build5nines.com/wp-content/uploads/2022/07/Microsoft_Azure_CLI_Featured_Image_3b-2.jpg",
+      topics: ["Azure"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "22/09/08PowerPlatform.html",
       anchor: true,
       date: "22.9.8",
