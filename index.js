@@ -14,6 +14,19 @@ export default () => {
       },
     },
     {
+      src: "22/10/24nuxt.md",
+      date: "22.10.24",
+      title: "nuxtでデザインがおかしくなった",
+      text: "ローカルで開発していたときは問題なかったのに、本番でみるとデザインがおかしくなってる。これは最悪ですよね。",
+      img: "https://byceclorets.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2022/08/22191029/nuxt3-%E7%94%BB%E5%83%8F.png",
+      topics: ["Nuxt"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "22/09/08PowerPlatform.html",
       anchor: true,
       date: "22.9.8",
