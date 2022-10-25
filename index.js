@@ -27,6 +27,24 @@ export default () => {
       },
     },
     {
+      src: "https://qiita.com/kllc/items/d865550e8af4d9b07a01",
+      anchor: true,
+      date: "22.10.19",
+      title: "Nuxt３ で開発してみてハマったことレポート",
+      text: "コピペエンジニアのレベルで Nuxt3 に取り組むと、結構ハマったのでそのレポートです。",
+      img: "https://byceclorets.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2022/08/22191029/nuxt3-%E7%94%BB%E5%83%8F.png",
+      topics: ["Nuxt"],
+    },
+    {
+      src: "https://note.com/kllc/n/n5dbb147d4eb1",
+      anchor: true,
+      date: "22.10.17",
+      title: "Nuxt２かNuxt３か",
+      text: "自社で「Power Portal Framework(仮)」の開発を開始しようとおもって、昔のリポジトリをコピーして作ろうと思ったけど、 将来性を考えて、Nuxt2じゃなくて、Nuxt3で作ったほうが良さそうかなと思いました。",
+      img: "https://byceclorets.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2022/08/22191029/nuxt3-%E7%94%BB%E5%83%8F.png",
+      topics: ["Nuxt"],
+    },
+    {
       src: "22/09/08PowerPlatform.html",
       anchor: true,
       date: "22.9.8",
@@ -34,11 +52,6 @@ export default () => {
       text: "Power Platform リリース計画について説明する勉強会です",
       img: "https://images.ctfassets.net/6hm9tr1vnfzt/403pJQE91bU9lx0Niobvr0/985d6ff9dd3508f091186e301aedfdab/blade4_img_d.jpg",
       topics: ["Power Platform"],
-      author: {
-        name: "K",
-        avatar: "https://kllc.github.io/repo/img/user.png",
-        message: "コピペエンジニアです",
-      },
     },
     {
       src: "22/06/azurefunction.md",
