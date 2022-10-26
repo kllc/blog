@@ -121,17 +121,8 @@
     <div id="app">
       <v-app v-show="load" style="display: none">
         <v-app-bar app color="white" Dense elevation="2">
-          <v-toolbar-title>
-            <a href="./">
-              <v-img
-                contain
-                width="40"
-                src="https://kllc.github.io/repo/img/k.svg"
-              />
-            </a>
-          </v-toolbar-title>
           <v-toolbar-title class="ml-2">
-            <a href="./"> Blog </a>
+            <a href="./"> Resume </a>
           </v-toolbar-title>
         </v-app-bar>
 
@@ -180,22 +171,6 @@
 
             <section v-show="bloghtml">
               <div class="py-4"></div>
-              <v-container>
-                <div align="center" :style="'margin-left: ' + center_margin">
-                  <v-img
-                    height="120"
-                    contain
-                    :src="blogprop.img?blogprop.img:image(blogprop.title||blogprop.src)"
-                  />
-                </div>
-                <h1 align="center" :style="'margin-left: ' + center_margin">
-                  {{blogprop.title||blogprop.src}}
-                </h1>
-                <p align="center" :style="'margin-left: ' + center_margin">
-                  {{blogprop.date}}
-                </p>
-              </v-container>
-
               <v-container :class="side_padding">
                 <v-row>
                   <v-col
@@ -224,17 +199,6 @@
                     xl="4"
                     :class="side_padding"
                   >
-                    <v-card
-                      elevation="2"
-                      class="pa-4 mb-2"
-                      :style="'width:' + side_width + ';'"
-                    >
-                      <span class="title"> Topics</span>
-                      <div class="py-1"></div>
-                      <v-chip v-for="(item in blogprop.topics" class="ma-1">
-                        {{item}}
-                      </v-chip>
-                    </v-card>
                     <div
                       style="
                         position: -webkit-sticky;
@@ -242,27 +206,6 @@
                         top: 60px;
                       "
                     >
-                      <v-card
-                        elevation="2"
-                        class="pa-4 mb-2"
-                        :style="'width:' + side_width + ';'"
-                      >
-                        <span class="title"> Author</span>
-                        <div class="ma-2">
-                          <v-img
-                            class="pa-2"
-                            contain
-                            width="40"
-                            :src="blogprop.author?blogprop.author.avatar?blogprop.author.avatar:image(blogprop.author.name):image(blogprop.src)"
-                          />
-                        </div>
-                        <div class="pa-1">
-                          {{blogprop.author?blogprop.author.name:""}}
-                        </div>
-                        <div class="pa-1">
-                          {{blogprop.author?blogprop.author.message:""}}
-                        </div>
-                      </v-card>
                       <v-card
                         v-show="clientWidth > 1280 - 16"
                         elevation="2"
