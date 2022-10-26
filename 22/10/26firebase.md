@@ -9,7 +9,7 @@ Firebase という Google がやってるサービスをつかうとできるら
 
 https://firebase.google.com/pricing?hl=ja
 
-このなかの、Dynamics Link というサービスだそうです。
+このなかの、Dynamic Link というサービスだそうです。
 
 コピペエンジニアの仕事は、ほぼ Google のおかげで成り立ってるのに、まだ無料で助けてくれるんですか。
 ありがとうございます。一生ついていきます。
