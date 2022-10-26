@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "22/10/26firebase.md",
+      date: "22.10.26",
+      title: "Firebasae というサービス",
+      text: "スマホアプリの開発はほぼ初めてなので知らないことばっかりなんですが、Firebasae というサービスが便利らしいです。",
+      img: "https://i0.wp.com/build5nines.com/wp-content/uploads/2022/07/Microsoft_Azure_CLI_Featured_Image_3b-2.jpg",
+      topics: ["Azure"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "22/10/25cors.md",
       date: "22.10.25",
       title: "Azure CLI で CORS設定",
