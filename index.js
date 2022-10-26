@@ -5,7 +5,7 @@ export default () => {
       date: "22.10.26",
       title: "Firebasae というサービス",
       text: "スマホアプリの開発はほぼ初めてなので知らないことばっかりなんですが、Firebasae というサービスが便利らしいです。",
-      img: "https://i0.wp.com/build5nines.com/wp-content/uploads/2022/07/Microsoft_Azure_CLI_Featured_Image_3b-2.jpg",
+      img: "https://firebase.google.com/images/social.png",
       topics: ["Azure"],
       author: {
         name: "K",
