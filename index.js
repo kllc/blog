@@ -1,6 +1,15 @@
 export default () => {
   const index = [
     {
+      src: "22/10/27PowerPages/",
+      anchor: true,
+      date: "22.10.27",
+      title: "Power Pages 勉強会",
+      text: "22.10.27 に開催したPower Pages に関する勉強会の資料です",
+      img: "https://images.ctfassets.net/6hm9tr1vnfzt/403pJQE91bU9lx0Niobvr0/985d6ff9dd3508f091186e301aedfdab/blade4_img_d.jpg",
+      topics: ["Power Platform,Power Pages"],
+    },
+    {
       src: "22/10/26firebase.md",
       date: "22.10.26",
       title: "Firebasae というサービス",
