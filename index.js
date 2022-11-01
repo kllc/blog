@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "22/11/1windows11.md",
+      date: "22.11.1",
+      title: "Windows 11 で nuxt generate できない",
+      text: "PCを買い替えてWindows11になったら、nuxt generate できなくなって、ものすごいハマりました。",
+      img: "https://byceclorets.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2022/08/22191029/nuxt3-%E7%94%BB%E5%83%8F.png",
+      topics: ["Nuxt"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "22/10/27PowerPages/",
       anchor: true,
       date: "22.10.27",
