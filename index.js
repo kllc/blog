@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "22/11/26powerpages.md",
+      date: "22.11.26",
+      title: "Power Pages の課金情報まとめ",
+      text: "Power Pages の新しい従量課金がいまいちわかりにくかったので調査しました。",
+      img: "https://powerpages.microsoft.com/pictures/pages/homePage/hero/Hero.jpg",
+      topics: ["Power pages"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "22/11/1windows11.md",
       date: "22.11.1",
       title: "Windows 11 で nuxt generate できない",
