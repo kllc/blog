@@ -1,6 +1,6 @@
 # Power Pages の価格
 
-2022/10 月に Power Apps Portal から Power Pages という製品に変わり、課金方法も新しくなったけど、何点か疑問点があったので整理しました。
+2022/10 月に Power Apps Portal から Power Pages という製品に変わり、課金方法も新しくなりましたが、何点か疑問点があったので整理しました。
 
 Title : Power Pages の価格
 URL : https://powerpages.microsoft.com/ja-jp/pricing/
