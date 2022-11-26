@@ -1,3 +1,9 @@
+# Power Pages の課金
+
+2022/10 月に Power Apps Portal から Power Pages という製品に変わり、課金方法も新しくなったけど、何店か疑問点が合ったので以下の通り整理しました。
+
+https://powerpages.microsoft.com/ja-jp/pricing/
+
 # 従量課金の場合のカウント方法
 
 ## 認証済みユーザーに対する Power Pages プランの場合
@@ -26,7 +32,7 @@ URL : https://learn.microsoft.com/ja-jp/power-platform/admin/pay-as-you-go-meter
 
 ## 課金の上限設定はできるか
 
-以下公開情報に記載の Azure Cost Management 側で設定可否を確認する必要がございます。
+以下公開情報に記載の Azure Cost Management 側で設定可否を確認する必要がある。
 予算金額に応じたアラート設定は可能だけど、上限設定はできない。
 <参考>
 Title : コストを管理する方法
