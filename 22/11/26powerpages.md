@@ -1,10 +1,11 @@
-# Power Pages の課金
+# Power Pages の価格
 
-2022/10 月に Power Apps Portal から Power Pages という製品に変わり、課金方法も新しくなったけど、何店か疑問点が合ったので以下の通り整理しました。
+2022/10 月に Power Apps Portal から Power Pages という製品に変わり、課金方法も新しくなったけど、何点か疑問点があったので整理しました。
 
-https://powerpages.microsoft.com/ja-jp/pricing/
+Title : Power Pages の価格
+URL : https://powerpages.microsoft.com/ja-jp/pricing/
 
-# 従量課金の場合のカウント方法
+# 従量課金の場合の課金カウント方法
 
 ## 認証済みユーザーに対する Power Pages プランの場合
 
@@ -56,3 +57,4 @@ URL : https://learn.microsoft.com/ja-jp/power-platform/admin/pay-as-you-go-set-u
 
 「運用に変換」のボタンを押した直後の状態のときは、「サブスクリプションプラン」にも「従量課金」のどちらにもなっていない。
 恐らく無敵。
+だけど、いずれ使えなくなると思われる。
