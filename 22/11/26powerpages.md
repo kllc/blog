@@ -7,7 +7,7 @@ URL : https://powerpages.microsoft.com/ja-jp/pricing/
 
 # 従量課金の場合の課金カウント方法
 
-## 認証済みユーザーに対する Power Pages プランの場合
+## 認証済みユーザーのカウント
 
 サイトにログインした段階でカウントが発生。
 なお、このうち Dynamics 365 サブスクリプションや Power Apps per User プランを所有しているユーザーは対象外となる。
@@ -20,7 +20,7 @@ URL : https://learn.microsoft.com/ja-jp/power-platform/admin/pay-as-you-go-meter
 Azure Active Directory で認証したユーザーが、プランを所有している場合に対象外となる。
 Azure Active Directory B2C など他の認証方法で認証した場合は、課金されるので注意。
 
-## 匿名ユーザーに対する Power Pages プランの場合
+## 匿名ユーザーのカウント
 
 Web サイトページを閲覧した段階でカウントが発生。
 なお、匿名ユーザーはブラウザの Cookie に保存されたユーザー ID 情報により判別されるため、
