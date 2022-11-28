@@ -1,7 +1,7 @@
 # bind を使わずに Cosmos DB からデータを取得
 
-Azure Function で、Form でポストされた情報をもとに、Cosmos DB のデータを取得したいが、Azure Function のドキュメントには bind で取得する方法しか載っていない。  
-bind で取得する方法は、リクエストパラメータを条件にすることはできるが、Fucntion 内で計算された値をつかって、Cosmos DB を検索することができない。
+Azure Function で、Form でポストされた情報をもとに Cosmos DB のデータを取得したいが、Azure Function のドキュメントには bind で取得する方法しか載っていない。  
+bind で取得する方法は、Fucntion 内で計算された値をつかって Cosmos DB を検索することができない。
 
 ではどうすればよいか。  
 奇跡的に記事を見つけました。
