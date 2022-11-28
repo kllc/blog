@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "22/11/28cosmos.md",
+      date: "22.11.28",
+      title: "Cosmos DB をBindを使わずに操作する",
+      text: "Azure Function のドキュメントには bind で取得する方法しか載っていないけど、Fucntion 内で計算された値をつかって、Cosmos DB を検索したかったのでその調査。",
+      img: "https://www.rworks.jp/wp-content/uploads/2021/08/Azure-CosmosDB-c.png",
+      topics: ["Azure Functions", "Cosmos DB"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "22/11/26powerpages.md",
       date: "22.11.26",
       title: "Power Pages の課金情報まとめ",
