@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      async function getEntity() {
+        var field = "";
+        var url = document.getElementById("url");
+        var entity = document.getElementById("entity");
+
+        // entitylist.forEach(element =>{
+        // if(element.IsCustomAttribute == TRUE){
+        // field += fetch("https://spedev.api.crm7.dynamics.com/api/data/v9.1/EntityDefinitions(LogicalName='"+element+"')/Attributes/")
+        // }
+        // })
+
+        window.open(
+          url.value +
+            "EntityDefinitions(LogicalName='" +
+            entity.value +
+            "')/Attributes/"
+        );
+      }
+
+      function ExportCsv() {
+        //   var input_text = document.getElementById("input_text").value;
+
+        var input_text = document.getElementById("input_text").value;
+        var json = JSON.parse(input_text);
+
+        var content =
+          "LogicalName,SchemaName,DisplayName,AttributeType,FormatName,MaxLength,MinValue,MaxValue,MinSupportedValue,MaxSupportedValue,IsCustomAttribute,Description \n";
+
+        json.value.forEach((element) => {
+          content += element.LogicalName + ",";
+          content += element.SchemaName + ",";
+          if (element.DisplayName.UserLocalizedLabel)
+            content += element.DisplayName.UserLocalizedLabel.Label + ",";
+          else content += ",";
+          content += element.AttributeTypeName.Value + ",";
+          if (element.FormatName) content += element.FormatName.Value += ",";
+          else content += ",";
+          if (element.MaxLength) content += element.MaxLength += ",";
+          else content += ",";
+          if (element.MinValue) content += element.MinValue += ",";
+          else content += ",";
+          if (element.MaxValue) content += element.MaxValue += ",";
+          else content += ",";
+          if (element.MinSupportedValue)
+            content += element.MinSupportedValue += ",";
+          else content += ",";
+          if (element.MaxSupportedValue)
+            content += element.MaxSupportedValue += ",";
+          else content += ",";
+          content += element.IsCustomAttribute + ",";
+          if (element.Description.UserLocalizedLabel)
+            content += element.Description.UserLocalizedLabel.Label + "\n";
+          else content += "\n";
+        });
+
+        var bom = new Uint8Array([0xef, 0xbb, 0xbf]);
+        var content = content;
+
+        //ファイル出力処理
+        var blob = new Blob([bom, content], { type: "text/csv" });
+
+        var fileName = "entity.csv";
+
+        //aタグを利用してIE以外のときにファイルDL機能を提供する
+        var tag = document.createElement("a");
+        tag.download = fileName;
+        tag.target = "_blank";
+        tag.href = window.webkitURL.createObjectURL(blob);
+        tag.click();
+
+        input_text.innerHTML = "";
+      }
+    </script>
+  </head>
+  <body>
+    URL<br />
+    <textarea id="url" style="width: 800px; height: 20px"></textarea>
+    <br />
+    Entity名<br />
+    <textarea id="entity" style="width: 800px; height: 20px"></textarea>
+    <br />
+    <input
+      type="button"
+      id="input_button"
+      onclick="getEntity()"
+      value="JSON取得"
+      style="width: 800px; height: 50px"
+    />
+    <br />
+    Input Text<br />
+    <textarea id="input_text" style="width: 800px; height: 400px"></textarea>
+    <br />
+    <input
+      type="button"
+      id="input_button"
+      onclick="ExportCsv()"
+      value="csv出力"
+      style="width: 800px; height: 50px"
+    />
+    <br />
+  </body>
+</html>
