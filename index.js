@@ -5,7 +5,7 @@ export default () => {
       date: "22.12.08",
       title: "二段階認証の回避",
       text: "二段階認証の回避をするとこのメッセージが出なくなります。出ないほうが便利なので、どうしてもやりたくなりますよね。",
-      img: "https://www.rworks.jp/wp-content/uploads/2021/08/Azure-CosmosDB-c.png",
+      img: "https://cdn.clipkit.co/tenants/86/articles/images/000/000/295/large/bcd729ff-10ed-4d0d-9c46-f25f4389e61e.png?1532444921",
       topics: ["Azure Functions", "Cosmos DB"],
       author: {
         name: "K",
