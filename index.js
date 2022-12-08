@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "22/12/08auth.md",
+      date: "22.12.08",
+      title: "二段階認証の回避",
+      text: "二段階認証の回避をするとこのメッセージが出なくなります。出ないほうが便利なので、どうしてもやりたくなりますよね。",
+      img: "https://www.rworks.jp/wp-content/uploads/2021/08/Azure-CosmosDB-c.png",
+      topics: ["Azure Functions", "Cosmos DB"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "22/11/28cosmos.md",
       date: "22.11.28",
       title: "Cosmos DB をBindを使わずに操作する",
