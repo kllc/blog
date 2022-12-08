@@ -3,8 +3,8 @@ export default () => {
     {
       src: "22/12/08auth.md",
       date: "22.12.08",
-      title: "二段階認証の回避",
-      text: "二段階認証の回避をするとこのメッセージが出なくなります。出ないほうが便利なので、どうしてもやりたくなりますよね。",
+      title: "Microsoftのアカウントの二段階認証の回避方法",
+      text: "二段階認証の回避をしたほうが便利なので、どうしてもやりたくなりますよね。",
       img: "https://cdn.clipkit.co/tenants/86/articles/images/000/000/295/large/bcd729ff-10ed-4d0d-9c46-f25f4389e61e.png?1532444921",
       topics: ["Azure Functions", "Cosmos DB"],
       author: {
