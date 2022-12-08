@@ -41,16 +41,15 @@ p@ssw0rd
 
 絶対やってはいけないのですが、やる方法は以下です。
 
-Azure Portal にログインして  
-Azure Active Directory 　を選択
+- Azure Portal にログインして Azure Active Directory 　を選択
 
 <img src="22/12/08-3.png" height="300" style="object-fit:contain" />
 
-プロパティ　＞　セキュリティ既定値の管理
+- プロパティ　＞　セキュリティ既定値の管理 を選択
 
 <img src="22/12/08-4.png" height="600" style="object-fit:contain" />
 
-セキュリティ既定値の有効化 を　「いいえ」　に変更
+- セキュリティ既定値の有効化 を　「いいえ」　に変更
 
 <img src="22/12/08-5.png" height="600" style="object-fit:contain" />
 
