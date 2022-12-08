@@ -35,7 +35,7 @@ p@ssw0rd
 二段階認証の回避をするとこのメッセージが出なくなります。  
 出ないほうが便利なので、どうしてもやりたくなりますよね。
 
-<img src="22/12/08-1.png" width="30%" />
+<img src="22/12/08-1.png" height="200" style="object-fit:contain" />
 
 # 二段階認証を回避する方法
 
@@ -44,15 +44,15 @@ p@ssw0rd
 Azure Portal にログインして  
 Azure Active Directory 　を選択
 
-<img src="22/12/08-3.png" width="30%" />
+<img src="22/12/08-3.png" height="200" style="object-fit:contain" />
 
 プロパティ　＞　セキュリティ既定値の管理
 
-<img src="22/12/08-4.png" width="30%" />
+<img src="22/12/08-4.png" height="200" style="object-fit:contain" />
 
 セキュリティ既定値の有効化 を　「いいえ」　に変更
 
-<img src="22/12/08-5.png" width="30%" />
+<img src="22/12/08-5.png" height="200" style="object-fit:contain" />
 
 # 本来どうすべきか
 
