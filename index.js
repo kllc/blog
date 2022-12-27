@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "22/12/27module.md",
+      date: "22.12.27",
+      title: "Type Module にグローバル変数を作成する方法",
+      text: "type=module で作った scriptでハマりました。わかってしまえば大した話ではないのですが、とりあえずメモ。",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png",
+      topics: ["Azure Functions", "Cosmos DB"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "22/12/08auth.md",
       date: "22.12.08",
       title: "Microsoftのアカウントの二段階認証の回避方法",
