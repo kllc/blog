@@ -134,12 +134,15 @@ window.location.hash = '1';
 ・Power Platform とインフラ・非機能要件
 ・OpenAI・Chat GPT
 
-当日の勉強会の動画
-👉 [Youtube](https://youtube.com/live/E7CZwGmdyi4?feature=share)
-
 ---
 
 <!-- class: slides -->
+
+# 勉強会の動画
+
+👉 [Youtube](https://youtube.com/live/E7CZwGmdyi4?feature=share)
+
+---
 
 # Chat GPT ネット記事、Tweet など
 
