@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "23/01/30chatgpt.md",
+      date: "23.01.30",
+      title: "Chat GPT 勉強会",
+      text: "Chat GTP について勉強会で話したときの資料とYoutubeリンクです。",
+      img: "https://www.atriainnovation.com/wp-content/uploads/2023/01/Portada-1080x675.jpg",
+      topics: ["Chat GPT", "Power Apps"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "22/12/27module.md",
       date: "22.12.27",
       title: "Type Module にグローバル変数を作成する方法",
