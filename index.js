@@ -1,7 +1,8 @@
 export default () => {
   const index = [
     {
-      src: "23/01/30chatgpt.md",
+      src: "23/01/30ChatGPT/",
+      anchor: true,
       date: "23.01.30",
       title: "Chat GPT 勉強会",
       text: "Chat GTP について勉強会で話したときの資料とYoutubeリンクです。",
