@@ -1,6 +1,14 @@
 export default () => {
   const index = [
     {
+      src: "https://www.canva.com/design/DAFi_rVopd8/XRDl1KFt7YsDRoDrXY7G6w/view?utm_content=DAFi_rVopd8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
+      anchor: true,
+      date: "23.5.17",
+      title: "Power Portal Framework",
+      text: "Dynamics 365 / Power Apps のデータを活用したポータルサイトの開発フレームワークのご紹介です。",
+      img: "https://livelp.net/sub/adobe.svg",
+    },
+    {
       src: "23/01/30ChatGPT/",
       anchor: true,
       date: "23.01.30",
