@@ -1,7 +1,7 @@
 export default () => {
   const index = [
     {
-      src: "https://www.canva.com/design/DAFi_rVopd8/XRDl1KFt7YsDRoDrXY7G6w/view?utm_content=DAFi_rVopd8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
+      src: "https://www.canva.com/design/DAFi_rVopd8/XRDl1KFt7YsDRoDrXY7G6w/view",
       anchor: true,
       date: "23.5.17",
       title: "Power Portal Framework",
