@@ -6,7 +6,7 @@ export default () => {
       date: "23.5.22",
       title: "LiveLP",
       text: "Chat GPT と Cognitive Service を利用した、オンライン接客ツール LiveLP のご紹介です。",
-      img: "https://livelp.net/sub/adobe.svg",
+      img: "https://livelp.net/sub/LiveLPogp.png",
     },
     {
       src: "https://www.canva.com/design/DAFi_rVopd8/XRDl1KFt7YsDRoDrXY7G6w/view",
@@ -14,7 +14,7 @@ export default () => {
       date: "23.5.17",
       title: "Power Portal Framework",
       text: "Dynamics 365 / Power Apps のデータを活用したポータルサイトの開発フレームワークのご紹介です。",
-      img: "https://livelp.net/sub/adobe.svg",
+      img: "https://kllc.github.io/repo/img/PowerPortalFrameowrk.png",
     },
     {
       src: "23/01/30ChatGPT/",
