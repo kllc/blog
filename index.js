@@ -1,6 +1,14 @@
 export default () => {
   const index = [
     {
+      src: "https://www.canva.com/design/DAFieChV9Z8/_JCf9fwyRICztdncb6q8zQ/view",
+      anchor: true,
+      date: "23.5.22",
+      title: "LiveLP",
+      text: "Chat GPT と Cognitive Service を利用した、オンライン接客ツール LiveLP のご紹介です。",
+      img: "https://livelp.net/sub/adobe.svg",
+    },
+    {
       src: "https://www.canva.com/design/DAFi_rVopd8/XRDl1KFt7YsDRoDrXY7G6w/view",
       anchor: true,
       date: "23.5.17",
