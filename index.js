@@ -6,6 +6,11 @@ export default () => {
       title: "Dynamics 365 Sales 01",
       text: "製品(Alive)ができあがったので、Dynamics 365 Salse を使って販売する。",
       img: "https://uploads-ssl.webflow.com/5d48a5473cf49e0fd4eae32a/5ed5ded58b992c3ac6ff7055_logo-product-dynamics-365.png",
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
     },
     {
       src: "https://www.canva.com/design/DAFieChV9Z8/_JCf9fwyRICztdncb6q8zQ/view",
