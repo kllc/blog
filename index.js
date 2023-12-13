@@ -1,6 +1,14 @@
 export default () => {
   const index = [
     {
+      src: "23/12/12/",
+      anchor: true,
+      date: "23.12.12",
+      title: "生成AI勉強会",
+      text: "12/12に開催された、生成AIに関する勉強会の資料です。",
+      img: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW1905k?ver=3718&q=90&m=6&h=540&w=1900&b=%23FFFFFFFF&l=f&o=t&aim=true",
+    },
+    {
       src: "23/07/13.md",
       date: "23.7.13",
       title: "Dynamics 365 Sales 01",
@@ -16,8 +24,8 @@ export default () => {
       src: "https://www.canva.com/design/DAFieChV9Z8/_JCf9fwyRICztdncb6q8zQ/view",
       anchor: true,
       date: "23.5.22",
-      title: "LiveLP",
-      text: "Chat GPT と Cognitive Service を利用した、オンライン接客ツール LiveLP のご紹介です。",
+      title: "Alive",
+      text: "Chat GPT と Cognitive Service を利用した、オンライン接客ツール Alive のご紹介です。",
       img: "https://livelp.net/sub/LiveLPogp.png",
     },
     {
