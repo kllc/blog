@@ -1,8 +1,8 @@
 export default () => {
   const index = [
     {
-      src: "23/07/13.md",
-      date: "23.7.13",
+      src: "24/02/21.md",
+      date: "24.2.21",
       title: "Nuxt3 と Azure Static Web Apps を使うと真っ白になる",
       text: "Nuxt3 と Azure Static Web Apps を作る際に久々に大ハマリしたので公開します。",
       img: "https://byceclorets.s3.ap-northeast-1.amazonaws.com/wp-content/uploads/2022/08/22191029/nuxt3-%E7%94%BB%E5%83%8F.png",
