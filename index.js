@@ -1,6 +1,14 @@
 export default () => {
   const index = [
     {
+      src: "24/04/22/",
+      anchor: true,
+      date: "24.4.22",
+      title: "Power Platform 勉強会",
+      text: "4/22に開催された、Power Platform 勉強会で PowerAutomate について説明した際の資料です。",
+      img: "https://biqql.com/wp-content/uploads/2024/02/Power-Platform.svg",
+    },
+    {
       src: "24/02/21.md",
       date: "24.2.21",
       title: "Nuxt3 と Azure Static Web Apps を使うと真っ白になる",
