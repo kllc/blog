@@ -1,6 +1,14 @@
 export default () => {
   const index = [
     {
+      src: "24/05/23/",
+      anchor: true,
+      date: "24.5.23",
+      title: "AWS Lambda Python の環境作成",
+      text: "ほぼ日記なので、作者以外には意味がない記事です。AWS Lambda に Python のコードをデプロイすることになり、環境構築を行いました。",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png",
+    },
+    {
       src: "24/04/22/",
       anchor: true,
       date: "24.4.22",
