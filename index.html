@@ -128,7 +128,7 @@
               <v-container :class="side_padding">
                 <v-row>
                   <v-col
-                    v-for="({ src, img, title, text, date}, i) in articles"
+                    v-for="({ src, img, title, text, date,hide}, i) in articles"
                     v-if="!hide"
                     :key="i"
                     cols="12"
