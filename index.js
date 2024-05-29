@@ -3,6 +3,7 @@ export default () => {
     {
       src: "24/05/28.md",
       date: "24.5.28",
+      hide: true,
       title: "RAG評価ツールの RAGASの調査",
       text: "RAGASの調査を行いました。",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png",
