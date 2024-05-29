@@ -1,6 +1,13 @@
 export default () => {
   const index = [
     {
+      src: "24/05/28.md",
+      date: "24.5.28",
+      title: "RAGASの調査",
+      text: "RAGASの調査を行いました。",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png",
+    },
+    {
       src: "24/05/23.md",
       date: "24.5.23",
       title: "AWS Lambda Python の環境作成",
