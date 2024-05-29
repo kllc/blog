@@ -1,0 +1,311 @@
+<html>
+  <head>
+    <title>Report</title>
+    <link rel="icon" href="https://kllc.github.io/repo/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/vs2015.min.css" />
+    <style>
+      body {
+        font-family: "Noto Sans JP", sans-serif;
+      }
+      a {
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .toc a {
+        /* Table of contents anchor link style */
+        color: #1976d2;
+      }
+      .toc a:hover {
+        color: #d17519;
+      }
+      .toc a.is-active-link {
+        /* The style of the currently active table of contents */
+        color: #d17519;
+      }
+      .content {
+        padding: 10px;
+      }
+      .content img {
+        width: 100%;
+      }
+      .content h1 {
+        width: 100%;
+        font-size: 2rem;
+        border-bottom: 1px solid #999;
+      }
+      .content p {
+        padding: 0 10px;
+        padding-bottom: 16px;
+        margin: 0 !important;
+      }
+      .content h1,
+      .content h2,
+      .content h3 {
+        /* Fixing anchor link misalignment */
+        margin-bottom: 16px;
+        margin-top: -100px;
+        padding-top: 100px;
+      }
+      .content code {
+        background: #000 !important;
+        color: #fff !important;
+        margin: 0 10px;
+        margin-bottom: 16px;
+      }
+      .content p > code {
+        margin: 0;
+      }
+      .content hr {
+        margin-bottom: 16px !important;
+      }
+      .content table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 0 10px;
+        margin-bottom: 16px;
+      }
+      .content table th {
+        padding: 10px 20px;
+        border-bottom: 1px solid #999;
+        background-color: #eee;
+      }
+      .content table td {
+        padding: 10px 20px;
+        border-top: 1px solid #ccc;
+      }
+      .content blockquote {
+        margin: 0;
+        margin-bottom: 16px;
+        border-left: 0.25rem solid #dfe2e5;
+        padding: 0 1rem;
+      }
+      .content blockquote > :first-child {
+        margin-top: 0;
+      }
+      .content blockquote > :last-child {
+        margin-bottom: 0;
+      }
+      .content ul,
+      .content ol {
+        margin: 0;
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <v-app v-show="load" style="display: none">
+        <v-app-bar app color="white" Dense elevation="2">
+          <v-toolbar-title class="ml-2">
+            <a href="./"> {{blogprop.title||"Report"}}</a>
+          </v-toolbar-title>
+        </v-app-bar>
+
+        <v-main class="grey lighten-5">
+          <v-container fluid>
+            <section v-show="bloghtml">
+              <div class="py-4"></div>
+
+              <v-container :class="side_padding">
+                <v-row>
+                  <v-col cols="12" xs="12" sm="12" md="12" lg="8" xl="8" :class="side_padding">
+                    <v-card
+                      elevation="2"
+                      class="pa-4"
+                      :min-height="'calc(50vh - 120px - ' + $vuetify.application.top + 'px )'"
+                    >
+                      <div class="content" v-html="bloghtml"></div>
+                    </v-card>
+                  </v-col>
+                  <v-col cols="12" xs="12" sm="12" md="12" lg="4" xl="4" :class="side_padding">
+                    <div style="position: -webkit-sticky; position: sticky; top: 60px">
+                      <v-card
+                        v-show="clientWidth > 1280 - 16"
+                        elevation="2"
+                        class="pa-4"
+                        :style="'width:' + side_width + ';'"
+                      >
+                        <span class="title"> Contents</span>
+                        <div class="toc"></div>
+                      </v-card>
+                    </div>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </section>
+          </v-container>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://unpkg.com/axios@1.0.0/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/vbnet.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/pieroxy/lz-string/libs/lz-string.js"></script>
+
+    <script type="module">
+      import index from "./index.js";
+      // If you want to remove the ads, remove this line.
+      import ad from "https://kllc.github.io/repo/script/ad.js";
+      // If you want to speed up, delete this line.
+      import emoji from "https://kllc.github.io/repo/script/emoji.js";
+
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data() {
+          return {
+            load: false,
+            bloghtml: "",
+            blogprop: {
+              id: 0,
+              src: "note",
+              date: "",
+              img: "",
+              title: "",
+              topics: [],
+              author: { name: "", avatar: "", message: "" },
+              text: "",
+            },
+            articles: index(),
+            // If you want to remove the ads, remove this line.
+            ad: ad(),
+            clientWidth: 0,
+            clientHeight: 0,
+            // If you want to speed up, delete this line.
+            emojis: emoji(),
+          };
+        },
+        computed: {
+          side_padding() {
+            if (this.clientWidth > 960) {
+              return "";
+            } else {
+              return "px-0";
+            }
+          },
+          side_width() {
+            if (this.clientWidth > 1280 - 16) {
+              return "310px";
+            } else {
+              return "100%";
+            }
+          },
+          center_margin() {
+            if (this.clientWidth > 1920 - 16) {
+              return (1920 - 16 - this.clientWidth) / 2 + "px";
+            } else if (this.clientWidth > 1280 - 16) {
+              return (1280 - 16 - this.clientWidth) / 2 + "px";
+            } else {
+              return "0px";
+            }
+          },
+        },
+        async mounted() {
+          const url = new URL(window.location.href);
+          const params = url.searchParams;
+
+          // Setting up marked.js
+          marked.setOptions({
+            breaks: true,
+
+            // Highlighting with highlight.js
+            highlight: function (code, lang) {
+              return hljs.highlightAuto(code, [lang]).value;
+            },
+          });
+
+          if (params.get("prop")) {
+            this.blogprop = JSON.parse(
+              '{"src":"urlencode",' + LZString.decompressFromEncodedURIComponent(params.get("prop")) + "}"
+            );
+            document.title = this.blogprop.title;
+          }
+
+          if (params.get("html")) {
+            this.bloghtml = marked(LZString.decompressFromEncodedURIComponent(params.get("html")));
+          }
+
+          if (params.get("src")) {
+            const blogprop = this.articles.filter((item) => {
+              if (item.src == params.get("src")) return true;
+            })[0];
+            if (blogprop) {
+              this.blogprop = blogprop;
+            } else {
+              this.blogprop.src = params.get("src");
+            }
+            if (this.blogprop.anchor) {
+              window.location.href = params.get("src");
+            }
+            const res = await axios.get(this.blogprop.src);
+            document.title = this.blogprop.title || this.blogprop.src;
+
+            this.bloghtml = marked(res.data);
+          }
+
+          this.$nextTick(() => {
+            this._updateDimensions();
+            window.addEventListener("resize", this._updateDimensions, {
+              passive: true,
+            });
+            tocbot.init({
+              tocSelector: ".toc",
+              contentSelector: ".content",
+              headingSelector: "h1, h2, h3",
+              hasInnerContainers: true,
+            });
+            this.load = true;
+          });
+        },
+        watch: {
+          // https://qiita.com/miyauchoi/items/73fa77f65b88214d9dba
+          bloghtml: function (val) {
+            this.$nextTick(function () {
+              // Initial processing of highlight.js
+              // https://stackoverflow.com/questions/13094541/how-to-reinitialize-highlight-js
+              hljs.initHighlighting.called = false;
+              hljs.initHighlighting();
+            });
+          },
+        },
+        methods: {
+          _updateDimensions() {
+            this.clientWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            this.clientHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+          },
+
+          image(text) {
+            //https://qiita.com/_shimizu/items/eb6834f255d76b1ed8cf
+            return this.emojis[Math.floor(this.decimalHash(text) * this.emojis.length)];
+          },
+          decimalHash(string) {
+            // https://stackoverflow.com/questions/61634063/generate-deterministic-hash-number-between-0-and-1-from-string
+            let sum = 0;
+            for (let i = 0; i < string.length; i++) sum += ((i + 1) * string.codePointAt(i)) / (1 << 8);
+            return sum % 1;
+          },
+        },
+        destroyed() {
+          window.removeEventListener("resize", this._updateDimensions);
+        },
+      });
+    </script>
+  </body>
+</html>
