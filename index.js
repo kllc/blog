@@ -3,10 +3,10 @@ export default () => {
     {
       src: "24/05/28.md",
       date: "24.5.28",
-      hide: true,
+      hide: false,
       title: "RAG評価ツールの RAGASの調査",
       text: "RAGASの調査を行いました。",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png",
+      img: "https://qiita-user-contents.imgix.net/https%3A%2F%2Fgithub.com%2Fexplodinggradients%2Fragas%2Fraw%2Fmain%2Fdocs%2F_static%2Fimgs%2Flogo.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&s=75abff9287a712a3fbbbbe2cb5a20df0",
     },
     {
       src: "24/05/23.md",
