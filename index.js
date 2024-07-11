@@ -6,6 +6,12 @@ export default () => {
       title: "Dataverse APIの制限",
       text: "たまにAPI の制限に引っかかることがあったり、API の制限を心配することがあったり、その都度調べていたのでまとめておきます。",
       img: "https://www.arcuss-japan.com/wp-content/uploads/2021/10/21_Microsoft-Dataverse%E3%83%BB%E5%9F%9F%E7%AB%8BCDS.png",
+      topics: ["Dataverse"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
     },
     {
       src: "24/05/28.md",
