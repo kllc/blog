@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "25/10/16.md",
+      date: "25.10.16",
+      title: "iPhone 変えたら テナントに入れなくなった。",
+      text: "スマホを替える時は、Microsoft Authenticator の移行を忘れないでください！という記事があったのですが、移行を忘れてしまったので対処法をメモしておきます。",
+      img: "https://cache.cil.ahamo.com/products/iphone/iphone-17-pro/APL85320/APL85320_L_01.jpg",
+      topics: ["Azure Entra ID"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "24/07/11.md",
       date: "24.7.11",
       title: "Dataverse APIの制限",

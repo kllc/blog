@@ -1,11 +1,9 @@
-# Github Pages URL
+# 説明
 
-https://kllc.github.io/blog/
+Github にプッシュしてそのままブログになったら便利かなと思い作ったブログもどきです。
+今となってはブログサービスも Github 連携できるようになっているので、あまり意味がないですが・・
 
-# Localhost Testing With Docker
+（参考）
+https://kllc.github.io/blog/?src=22/01/markdown-blog.md
 
-Type the following command at a command prompt
-
-`docker run -d -p 8080:80 -v "%cd%:/usr/local/apache2/htdocs/" --name docker-httpd --rm httpd:alpine`
-
-http://localhost:8080
+# 説明
