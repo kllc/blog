@@ -1,6 +1,19 @@
 export default () => {
   const index = [
     {
+      src: "25/10/17.md",
+      date: "25.10.17",
+      title: "（未解決）Microsoft 個人用アカウントの多要素認証の罠",
+      text: "個人用アカウントでAzure Portal に一生ログインできない問題が発生しているので記録しておきます。",
+      img: "https://office365labo.com/wp-content/uploads/2023/08/image-1.png",
+      topics: ["Azure Entra ID"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
+    },
+    {
       src: "25/10/16.md",
       date: "25.10.16",
       title: "iPhone 変えたら テナントに入れなくなった。",
