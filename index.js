@@ -27,12 +27,12 @@ export default () => {
       },
     },
     {
-      src: "https://chatgpt.com/canvas/shared/6943737b6410819198fd4d0134ab06a0",
+      src: "https://chatgpt.com/canvas/shared/69439dad467c8191a9b145e6cca85639",
       anchor: true,
       date: "25.10.1",
       title: "Power BI のクロスフィルター",
       text: "Power BI のクロスフィルターは使うべきではないとなんとなく知ってるけど、なんでなのかチャッピーが教えてくれたので記録しておきました。",
-      img: "https://chatgpt.com/canvas/shared/69439dad467c8191a9b145e6cca85639",
+      img: "https://utilly.ne.jp/wp-content/uploads/2023/10/Microsoft-Power-BI_logo.png",
     },
     {
       src: "24/07/11.md",
