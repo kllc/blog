@@ -27,6 +27,14 @@ export default () => {
       },
     },
     {
+      src: "https://chatgpt.com/canvas/shared/6943737b6410819198fd4d0134ab06a0",
+      anchor: true,
+      date: "25.10.1",
+      title: "Power BI のクロスフィルター",
+      text: "Power BI のクロスフィルターは使うべきではないとなんとなく知ってるけど、なんでなのかチャッピーが調べてくれたので記録しておきました。",
+      img: "https://utilly.ne.jp/wp-content/uploads/2023/10/Microsoft-Power-BI_logo.png",
+    },
+    {
       src: "24/07/11.md",
       date: "24.7.11",
       title: "Dataverse APIの制限",
