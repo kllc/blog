@@ -31,8 +31,8 @@ export default () => {
       anchor: true,
       date: "25.10.1",
       title: "Power BI のクロスフィルター",
-      text: "Power BI のクロスフィルターは使うべきではないとなんとなく知ってるけど、なんでなのかチャッピーが調べてくれたので記録しておきました。",
-      img: "https://utilly.ne.jp/wp-content/uploads/2023/10/Microsoft-Power-BI_logo.png",
+      text: "Power BI のクロスフィルターは使うべきではないとなんとなく知ってるけど、なんでなのかチャッピーが教えてくれたので記録しておきました。",
+      img: "https://chatgpt.com/canvas/shared/69439dad467c8191a9b145e6cca85639",
     },
     {
       src: "24/07/11.md",
