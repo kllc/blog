@@ -1,6 +1,14 @@
 export default () => {
   const index = [
     {
+      src: "https://chatgpt.com/canvas/shared/695f3f8fd924819187938e0c44142aa9",
+      anchor: true,
+      date: "26.01.08",
+      title: "Azure Functions によるAPI開発の最短ルート",
+      text: "よくAzure Function 作るけど最短ルートいつも迷うのでチャッピーにきいて記録しておきました。",
+      img: "https://beecrowd.com/wp-content/uploads/2024/04/2023-05-09-API.jpg",
+    },
+    {
       src: "25/10/17.md",
       date: "25.10.17",
       title: "（未解決）Microsoft 個人用アカウントの多要素認証の罠",
