@@ -1,7 +1,7 @@
 export default () => {
   const index = [
     {
-      src: "https://chatgpt.com/canvas/shared/695f3f8fd924819187938e0c44142aa9",
+      src: "https://chatgpt.com/canvas/shared/695f4e8da09c8191950478c26aa46a58",
       anchor: true,
       date: "26.01.08",
       title: "Azure Functions によるAPI開発の最短ルート",
