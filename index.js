@@ -6,6 +6,12 @@ export default () => {
       title: "(自社用)Claude Code の開発フロー, Extend Claude Code ",
       text: "Claude Desktop に作ってもらった自社用のドキュメントです。K合同会社内のプロジェクトでの claude code の使い方の共有です。",
       img: "https://i.ytimg.com/vi/u_2vzJfV7oU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD8_5-NqC03-8N8z8-d8qHf6QKg1g",
+      topics: ["Claude Code"],
+      author: {
+        name: "K",
+        avatar: "https://kllc.github.io/repo/img/user.png",
+        message: "コピペエンジニアです",
+      },
     },
     {
       src: "https://chatgpt.com/canvas/shared/695f4e8da09c8191950478c26aa46a58",
